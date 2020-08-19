@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   post "mood_update", to: "pages#mood_update"
 
   resources :userquests
+  resources :quests
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
