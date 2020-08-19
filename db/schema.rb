@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_091640) do
+ActiveRecord::Schema.define(version: 2020_08_19_105635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,11 +54,7 @@ ActiveRecord::Schema.define(version: 2020_08_19_091640) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "flashcard_id", null: false
-    t.bigint "video_id", null: false
     t.text "description"
-    t.index ["flashcard_id"], name: "index_quests_on_flashcard_id"
-    t.index ["video_id"], name: "index_quests_on_video_id"
   end
 
   create_table "user_quests", force: :cascade do |t|
@@ -111,8 +107,6 @@ ActiveRecord::Schema.define(version: 2020_08_19_091640) do
   add_foreign_key "flashcards_executions", "flashcards"
   add_foreign_key "flashcards_executions", "user_quests"
   add_foreign_key "messages", "chatrooms"
-  add_foreign_key "quests", "flashcards"
-  add_foreign_key "quests", "videos"
   add_foreign_key "user_quests", "quests"
   add_foreign_key "user_quests", "users"
   add_foreign_key "videos", "quests"

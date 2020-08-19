@@ -1,5 +1,5 @@
 class Quest < ApplicationRecord
   has_many :user_quests
-  belongs_to :flashcard
-  belongs_to :video
+  has_many :flashcards
+  has_many :videos
 end
