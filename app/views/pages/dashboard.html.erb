@@ -1,9 +1,10 @@
 <form action="/mood_update" method="post">
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <label for="mood">Mood</label>
-  <input type="checkbox" id="joie" name="joie"><label for="joie">Joie</label>
-  <input type="checkbox" id="triste" name="triste"><label for="triste">Triste</label>
-
+  <input type="checkbox" id="Stressé.e" name="Stressé.e"><label for="Stressé.e">Stressé.e</label>
+  <input type="checkbox" id="Jaloux.se" name="Jaloux.se"><label for="Jaloux.se">Jaloux.se</label>
+  <input type="checkbox" id="Incompris.e" name="Incompris.e"><label for="Incompris.e">Incompris.e</label>
+  <input type="checkbox" id="En colère" name="En colère"><label for="En colère">En colère</label>
   <input type="submit" name="commit" value="Update User" data-disable-with="Update User">
 
 </form>
