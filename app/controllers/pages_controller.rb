@@ -8,13 +8,12 @@ class PagesController < ApplicationController
     @user = current_user
     # @last_mood = current_user.mood
     @moods = User::MOODS
-    # @quests = Quest.where(mood = current_user.mood)
-    #
+    @quests = Quest.find_by_moods(current_user.moods)
   end
 
   def mood_update
     new_moods = params.select {|param, value| value == "on"}.keys
-    current_user.moods = new_moods
+    current_user.moods = new_moods.first(4)
     current_user.save
     redirect_to dashboard_path(anchor: "top-quest")
   end
