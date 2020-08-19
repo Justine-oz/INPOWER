@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   def dashboard
     @user = current_user
     # @last_mood = current_user.mood
-    @moods = ["joyeux", "triste"]
+    @moods = User::MOODS
     # @quests = Quest.where(mood = current_user.mood)
     #
   end
@@ -18,7 +18,7 @@ class PagesController < ApplicationController
     current_user.save
     redirect_to dashboard_path(anchor: "top-quest")
   end
-  
+
 private
 
 # def set_user
