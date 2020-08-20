@@ -1,17 +1,44 @@
 <div class="container">
+  <div class="navbar"></div>
+  <div class="welcome">
+    <h1 class="dashboard-title">Bienvenue</h1>
+    <h3></h3>
+  </div>
+  <div class="innerpower">
+    <!-- div img  et p dessus-->
+  </div>
+  <div class="details">
+    <h3></h3>
+  </div>
   <div class="moods-choice">
     <form class="form-choice" action="/mood_update" method="post">
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-      <h2>QUEL EST TON MOOD AUJOURD'HUI ?</h2>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <h2 class="questions">QUEL EST TON MOOD AUJOURD'HUI ?</h2>
       <% User::MOODS.each_with_index do |mood, i| %>
-        <input type="checkbox" hidden value="<%= mood %>" id="mood-<%= i %>" name="<%= mood %>">
-        <label class="mood-checkbox" for="<%= mood %>" data-for="mood-<%= i %>">
+      <input
+        class="input-checkbox"
+        type="checkbox"
+        hidden
+        value="<%= mood %>"
+        id="mood-<%= i %>"
+        name="<%= mood %>"
+      />
+      <label class="mood-checkbox" for="<%= mood %>" data-for="mood-<%= i %>">
         <%= mood %>
         <i class="fa fa-check"></i>
       </label>
       <% end %>
-      <input class="btn" type="submit" name="commit" value="Update User" data-disable-with="Update User">
+      <input
+        class="btn"
+        type="submit"
+        name="commit"
+        value="Update User"
+        data-disable-with="Update User"
+      />
     </form>
   </div>
-</div>
 
+  <div class="quests">
+    <h2 class="questions"></h2>
+  </div>
+</div>
