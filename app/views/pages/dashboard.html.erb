@@ -1,44 +1,46 @@
-<div class="container">
-  <div class="navbar"></div>
-  <div class="welcome">
-    <h1 class="dashboard-title">Bienvenue</h1>
-    <h3></h3>
-  </div>
-  <div class="innerpower">
-    <!-- div img  et p dessus-->
-  </div>
-  <div class="details">
-    <h3></h3>
-  </div>
-  <div class="moods-choice">
-    <form class="form-choice" action="/mood_update" method="post">
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-      <h2 class="questions">QUEL EST TON MOOD AUJOURD'HUI ?</h2>
-      <% User::MOODS.each_with_index do |mood, i| %>
-      <input
-        class="input-checkbox"
-        type="checkbox"
-        hidden
-        value="<%= mood %>"
-        id="mood-<%= i %>"
-        name="<%= mood %>"
-      />
-      <label class="mood-checkbox" for="<%= mood %>" data-for="mood-<%= i %>">
-        <%= mood %>
-        <i class="fa fa-check"></i>
-      </label>
-      <% end %>
-      <input
-        class="btn"
-        type="submit"
-        name="commit"
-        value="Update User"
-        data-disable-with="Update User"
-      />
-    </form>
-  </div>
+<div class="viewport">
+  <div class="container">
+    <div class="welcome">
+      <h1 class="dashboard-title">Bienvenue</h1>
+      <h2></h2>
+    </div>
+    <div class="innerpower">
+      <!-- div img  et p dessus-->
+    </div>
+    <div class="details">
+      <h3></h3>
+    </div>
+    <div class="title">
+      <h2> QUEL EST TON MOOD AUJOURD'HUI ? </h2>
+    </div>
+    <div class=" mx-auto">
+      <form class="justify-content-center row form-choice" action="/mood_update" method="post">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <% User::MOODS.each_with_index do |mood, i| %>
+          <div class="card col-5 mood-checkbox" data-for="mood-<%= i %>">
+            <div class="plus"><p><i class="fa fa-check"></i></p></div>
+            <input
+            class="input-checkbox"
+            type="checkbox"
+            hidden
+            value="<%= mood %>"
+            id="mood-<%= i %>"
+            name="<%= mood %>"
+            />
+            <h3><label class="mood-checkbox" for="<%= mood %>" data-for="mood-<%= i %>">
+              <%= mood %>
+            </label></h3>
+          </div>
+        <% end %>
+      </form>
+    </div>
 
-  <div class="quests">
-    <h2 class="questions"></h2>
+    <input
+    class="btn"
+    type="submit"
+    name="commit"
+    value="Update User"
+    data-disable-with="Update User"
+    />
   </div>
 </div>
