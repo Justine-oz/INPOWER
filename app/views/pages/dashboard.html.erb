@@ -13,7 +13,7 @@
     <div class="title">
       <h2> QUEL EST TON MOOD AUJOURD'HUI ? </h2>
     </div>
-    <div class=" mx-auto">
+    <div class="mx-auto">
       <form class="justify-content-center row form-choice" action="/mood_update" method="post">
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <% User::MOODS.each_with_index do |mood, i| %>
@@ -42,5 +42,18 @@
     value="Update User"
     data-disable-with="Update User"
     />
+  </div>
+
+  <div class="quests">
+  <div class="title">
+      <h2> CHOISIS LA QUÊTE QUI TE CORRESPOND </h2>
+    </div>
+    <div class="mx-auto">
+      <% @quests.each do |quest| %>
+        <%= quest.name %>
+      <% end %>
+    </div>
+
+    </div>
   </div>
 </div>
