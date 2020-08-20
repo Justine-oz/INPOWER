@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 Flashcard.destroy_all
 Quest.destroy_all
 User.destroy_all
@@ -15,8 +14,8 @@ user1 = User.create(email: 'test@test.fr', password: '123456', moods: ["Incompri
 
 quests = [
   {name: "Savoir dire non", description: "...", moods:["Jaloux.se", "Incompris.e", "Amoureux.se", "Fort.e", "Trahi.e", "Je ne sais pas"], flashcards_nums: [1, 4]},
-  # {name: "Garder mon calme", description: "...", moods:["Stressé.e", "En colère", "Amoureux.se", "Honteux.se"]},
-  # {name: "Avoir confiance en moi", description: "...", moods:["Jaloux.se", "Stressé.e", "Seul.e", "Amoureux.se", "Honteux.se"]},
+  {name: "Garder mon calme", description: "...", moods:["Stressé.e", "En colère", "Amoureux.se", "Honteux.se"], flashcards_nums: [2, 3]},
+  # {name: "Avoir confiance en moi", description: "...", moods:["Jaloux.se", "Stressé.e", "Seul.e", "Amoureux.se", "Honteux.se"], flashcards_nums: [3, 4,]}
   # {name: "Pouvoir dire 'je t'aime'", description: "...", moods:["Optimiste", "Amoureux.se", "Fort.e", "Honteux.se"]},
   # {name: "Aller vers les autres", description: "...", moods:["Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Honteux.se"]},
   # {name: "Pouvoir faire confiance", description: "...", moods:["Jaloux.se", "En colère", "Seul.e", "Amoureux.se", "Fort.e"]},
@@ -51,7 +50,7 @@ flashcards = [
   {num: 17, question: "Quelle est la chose que personne ne sait sur toi ? Quels mots utiliserais-tu si tu voulais la partager ?", tip: "Fais un tableau. Identifie les causes et imagine ce qui pourrait être bénéfique à tes relations si tu te confiais davantage."},
   {num: 18, question: "Qu’est-ce que ton profil Instagram dit de toi ?", tip: "Distingue ce qui est l’image que tu veux donner de ce que tu sens vraiment proche de toi. Que veux-tu garder ?"},
   {num: 19, question: "Penses-tu que tout le monde a une mission ? Si oui, quelle est la tienne ?", tip: "Prends un papier et un stylo. Marque la date du jour et écris quelques lignes sur cette mission. Garde le papier dans un endroit sûr."},
-  {num: 20, question: "Quel est ton top 5 Netflix ? Pourquoi ?", tip: "Demande à un.e ami.e son top 5 et propose lui le tien. Prévoyez un moment pour échanger dessus."},
+  {num: 20, question: "Quel est ton top 5 Netflix ? Pourquoi ?", tip: "Demande à un.e ami.e son top 5 et propose lui le tien. Prévoyez un moment pour échanger dessus."}
   # {question: "Quel est ton super power secret ?", tip: "Rends-le moins secret ;)."},
   # {question: "Qu’est-ce que tu as besoin d’entendre, maintenant ?", tip: "Résume ce besoin en une phrase. Répète-la 5 fois à voix haute."},
   # {question: "Si tu étais un groupe de musique, quel serait ton nom ?", tip: "Crée un groupe de musique. Il peut exister une minute ou toute une vie."},
