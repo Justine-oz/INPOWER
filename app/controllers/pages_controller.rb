@@ -8,6 +8,7 @@ class PagesController < ApplicationController
     @user = current_user
     # @last_mood = current_user.mood
     @moods = User::MOODS
+    p current_user
     @quests = Quest.find_by_moods(current_user.moods)
   end
 
