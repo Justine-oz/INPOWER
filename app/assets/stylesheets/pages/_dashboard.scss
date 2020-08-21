@@ -1,5 +1,5 @@
 .viewport {
-  background: linear-gradient(90deg, #e7f2ef, #c0cee7, #9a9ed6);
+  background: linear-gradient(90deg, #d4f6f7, #f4ecd9, #9a9ed6);
   background-size: 200% 200%;
   height: auto;
   width: 100%;
@@ -81,12 +81,18 @@ h1 {
 }
 
 h2 {
+  font-family: asap;
   color: rgb(1, 0, 0);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 90%;
+  padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
+  border-width: 2px;
+  border-color: #260b9d;
+  border-style: solid;
+  border-radius: 10px;
 }
 
 .title {

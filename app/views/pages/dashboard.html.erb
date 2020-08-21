@@ -1,7 +1,7 @@
 <div class="viewport">
   <div class="container">
     <div class="welcome">
-      <h1 class="dashboard-title">Bienvenue Lu ✨</h1>
+      <h1 class="dashboard-title">BIENVENUE LU ✨</h1>
       <h2>Aujourd’hui, Vendredi 21 Août, voici<br>
         à quoi ressemble ton <strong>inner powær</strong></h2>
         <img src="https://image.freepik.com/free-vector/superhero-speed-hero-super-beast-comic-books-characters-action-pose-3-vertical-banners-blue-background_1284-32329.jpg" alt="" style="widows: 450px; height:235px;>
@@ -25,7 +25,6 @@
             class="input-checkbox"
             type="checkbox"
             hidden
-            value="<%= mood %>"
             id="mood-<%= i %>"
             name="<%= mood %>"
             />
@@ -34,20 +33,32 @@
             </label></h4>
           </div>
         <% end %>
+        <input
+          class="btn btn-primary"
+          type="submit"
+          value="Valide tes moods"
+        />
       </form>
     </div>
-
-    <input
-    class="btn"
-    type="submit"
-    name="commit"
-    value="Update User"
-    data-disable-with="Update User"
-    />
+    <br>
+  
   </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
   <div class="quests">
   <div class="title">
+  <div id="top-quest">
       <h2> CHOISIS LA QUÊTE QUI TE CORRESPOND </h2>
     </div>
     <div class="mx-auto">
@@ -55,7 +66,7 @@
         <%= quest.name %>
       <% end %>
     </div>
-
+    </div>
     </div>
   </div>
 </div>
