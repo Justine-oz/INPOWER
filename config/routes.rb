@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post "mood_update", to: "pages#mood_update"
 
   resources :userquests
-  resources :quests
+  resources :quests, only: [:show] do
+    get "flashcards", to: "quests#flashcards", as: :flashcards
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

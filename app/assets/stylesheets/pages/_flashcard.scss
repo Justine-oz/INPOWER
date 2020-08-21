@@ -1,0 +1,84 @@
+.title-main {
+  font-family: asap;
+  font-size: 40px;
+  color: white;
+}
+
+.flash-flashcards {
+
+  p {
+  font-family: asap;
+  font-size: 20px;
+  }
+  .cards {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    max-width: 34em;
+    margin: 10% auto 0;
+  }
+
+  .tip-button {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+  }
+  .tip-button.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .card-question.moved-left {
+    left: -100vw;
+  }
+  .card-question {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 70vw;
+    min-width: 70vw;
+    z-index: 2;
+    transition: all 1s ease-in-out;
+    background: #ccc;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 0 40px #000;
+    cursor: pointer;
+    user-select: none;
+
+    :last-child { margin-bottom: 0; }
+  }
+
+  // .card--next {
+  //   z-index: 5;
+  //   transform: translateY(-25px) rotate(4deg) translateX(25px) scale(1);
+  // }
+
+  // .card--out {
+  //   animation: card-out 0.6s cubic-bezier(.8,.2,.1,0.8);
+  //   transform: translateY(-50px) rotate(8deg) translateX(55px) scale(0.95);
+  //   z-index: 1;
+  //   background: #bbb;
+  // }
+
+  @keyframes card-out {
+    0% { z-index: 20; transform: translateY(0px) rotate(-4deg); }
+    50% { transform: translateY(-120%) rotate(-5deg) translateX(-40px); }
+    80% { z-index: 1; }
+    100% { transform: translateY(-50px) rotate(8deg) translateX(55px) scale(0.95); }
+  }
+
+  .card--current {
+    cursor: auto;
+    user-select: auto;
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    background: #EEE;
+    transform: rotate(-1deg) translateX(0%) scale(1);
+  }
+
+  ////////////////////////////////////////
+}
+  h2 { margin: 0; font-family: asap; }
+  html, body { height: 100%; }
+  body { padding: 40px; background: #222232; font-family: asap; }
