@@ -1,72 +1,97 @@
-
-
-.viewport{
-  background: linear-gradient(90deg, #20e6b3, #8e11f3, #4c20d4);
+.viewport {
+  background: linear-gradient(90deg, #e7f2ef, #c0cee7, #9a9ed6);
   background-size: 200% 200%;
   height: auto;
-  width:100%;
-  -webkit-animation:   AnimationName 10s ease infinite;
--moz-animation: AnimationName 10s ease infinite;
-animation: AnimationName 10s ease infinite;
+  width: 100%;
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+}
 
+h3 {
+  font-family: asap;
+  color: rgb(1, 0, 0);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 90%;
+  padding-bottom: 60px;
+  padding-top: 120px;
+  text-align: justify;
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-
-.card h3{
+.card h4 {
   font-family: asap;
-  margin:0px;
+  margin: 0px;
   color: black;
   font-weight: 400;
-  font-size:20px;
-  line-height:90%;
+  font-size: 16px;
+  line-height: 90%;
   padding-left: 8%;
-  padding-top:8%;
-  padding-bottom:3%;
-  cursor:pointer;
+  padding-top: 8%;
+  padding-bottom: 3%;
+  cursor: pointer;
   transition: ease 1s;
   -webkit-transition: ease 1s;
 }
 
-h1{
+h1 {
   font-family: asap;
-  color:white;
+  color: rgb(1, 0, 0);
   font-weight: 400;
-  font-size:35px;
-  line-height:90%;
-  padding-bottom:140px;
-  padding-top:150px;
-  position:relative;
-  text-align:center;
-
+  font-size: 28px;
+  line-height: 90%;
+  padding-bottom: 60px;
+  padding-top: 120px;
+  position: relative;
+  text-align: center;
 }
 
-h2{
-  color:white;
+h2 {
+  color: rgb(1, 0, 0);
   font-weight: 400;
-  font-size:35px;
-  line-height:90%;
-  padding-bottom:20px;
+  font-size: 20px;
+  line-height: 90%;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
-.title{
-  width:78%;
-  margin:auto;
+.title {
+  width: 78%;
+  margin: auto;
 }
 
 .cards {
@@ -76,58 +101,54 @@ h2{
 
 .card {
   height: 120px;
-  background-color:white;
-  margin:1.13%;
-  border-radius:5px;
+  background-color: white;
+  margin: 1.13%;
+  border-radius: 5px;
   transition: 1s;
-  -webkit-transition:0.5s;
-  cursor:pointer;
+  -webkit-transition: 0.5s;
+  cursor: pointer;
 }
 
-
-
-.card:hover{
+.card:hover {
   transform: scale(1.05);
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-.card-img-top{
-  width:100%;
-  height:40px;
+.card-img-top {
+  width: 100%;
+  height: 40px;
   background-size: cover;
-
 }
 
-.active .fa-check{
-color: green;
+.active .fa-check {
+  color: green;
 }
 
-.line{
-  height:2px;
-  width:84%;
-  margin:auto;
+.line {
+  height: 2px;
+  width: 84%;
+  margin: auto;
   background-color: #8e11f3;
 }
 
-
-.plus{
-  width:20px;
-  height:20px;
+.plus {
+  width: 20px;
+  height: 20px;
   position: absolute;
-  top:10px;
-  right:10px;
+  top: 10px;
+  right: 10px;
   transition: 1s;
   -webkit-transition: 1s;
 }
 
-.plus p{
+.plus p {
   padding: 0px !important;
-  display:inline;
-  margin:0px;
-  line-height:50%;
-  left:50%;
-  top:45.3%;
-  transform:translate(-50%,-50%);
-  position:absolute;
+  display: inline;
+  margin: 0px;
+  line-height: 50%;
+  left: 50%;
+  top: 45.3%;
+  transform: translate(-50%, -50%);
+  position: absolute;
   color: white;
 }
