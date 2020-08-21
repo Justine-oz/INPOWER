@@ -1,14 +1,13 @@
+<div class="dash">
 <div class="viewport">
   <div class="container">
     <div class="welcome">
       <h1 class="dashboard-title">BIENVENUE LU ✨</h1>
       <h2>
-        Aujourd’hui, Vendredi 21 Août, voici<br />
+        Aujourd’hui, Vendredi 21 Août, voici<br/>
         à quoi ressemble ton <strong>inner powær</strong>
       </h2>
-      <img
-      src="https://image.freepik.com/free-vector/superhero-speed-hero-super-beast-comic-books-characters-action-pose-3-vertical-banners-blue-background_1284-32329.jpg"
-      alt="" style="widows: 450px; height:235px;>
+      <img src="https://image.freepik.com/free-vector/superhero-speed-hero-super-beast-comic-books-characters-action-pose-3-vertical-banners-blue-background_1284-32329.jpg" alt="" style="widows: 450px; height:235px;">
     </div>
     <div class="innerpower">
       <!-- div img  et p dessus-->
@@ -71,7 +70,7 @@
         <h2>CHOISIS LA QUÊTE QUI TE CORRESPOND</h2>
       </div>
       <div class="mx-auto justify-content-center row">
-        <% @quests.each do |quest| %> 
+        <% @quests.each do |quest| %>
         <%= link_to quest_path(quest) do %>
         <div class="card col-5 mood-checkbox">
           <h4><%= quest.name %></h4>
@@ -82,4 +81,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
