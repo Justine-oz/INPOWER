@@ -19,6 +19,9 @@ class PagesController < ApplicationController
     redirect_to dashboard_path(anchor: "top-quest")
   end
 
+  def quest_update
+  end
+
 private
 
 # def set_user

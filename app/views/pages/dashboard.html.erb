@@ -71,11 +71,13 @@
         <h2>CHOISIS LA QUÊTE QUI TE CORRESPOND</h2>
       </div>
       <div class="mx-auto justify-content-center row">
-        <% @quests.each do |quest| %>
+        <% @quests.each do |quest| %> 
+        <%= link_to quest_path(quest) do %>
         <div class="card col-5 mood-checkbox">
           <h4><%= quest.name %></h4>
           <p><%= quest.description %></p>
         </div>
+          <% end %>
         <% end %>
       </div>
     </div>

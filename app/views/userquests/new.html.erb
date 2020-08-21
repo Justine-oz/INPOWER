@@ -1,0 +1,13 @@
+<div class="flashcards">
+  <div id="deck">
+    <h2>Flashcards</h2>
+  </div>
+  <div class="mx-auto justify-content-center row">
+    <% @flashcards.each do |flashcard| %>
+    <div class="card col-5 mood-checkbox">
+      <h4><%= flashcard.question %></h4>
+      <p><%= flashcard.tip %></p>
+    </div>
+    <% end %>
+  </div>
+</div>
