@@ -2,21 +2,32 @@
 <div class="viewport">
   <div class="container">
     <div class="welcome">
-      <h1 class="dashboard-title">BIENVENUE LU ✨</h1>
-      <h2>
-        Aujourd’hui, Vendredi 21 Août, voici<br/>
-        à quoi ressemble ton <strong>inner powær</strong>
-      </h2>
-      <img src="https://image.freepik.com/free-vector/superhero-speed-hero-super-beast-comic-books-characters-action-pose-3-vertical-banners-blue-background_1284-32329.jpg" alt="" style="widows: 450px; height:235px;">
-    </div>
-    <div class="innerpower">
+      <br />
+      <img
+        src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598015260/Group_4_bmuzq6.svg"
+        alt=""
+        class="center"
+      />
+      <div class="innerpower">
+        <h2>
+          Aujourd’hui, Vendredi 21 Août, voici<br />
+          à quoi ressemble ton <strong>inner powær</strong>
+        </h2>
+        <img
+        src="https://image.freepik.com/free-vector/superhero-speed-hero-super-beast-comic-books-characters-action-pose-3-vertical-banners-blue-background_1284-32329.jpg"
+        alt="" style="widows: 450px; height:235px;>
+      </div>
+      <div class="innerpower-details">
+        <img
+          src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598015943/Group_4_1_adike2.svg"
+          alt=""
+        />
+      </div>
       <!-- div img  et p dessus-->
     </div>
     <br />
-    <br />
-    <br />
     <div class="title">
-      <h2>QUEL EST TON MOOD AUJOURD'HUI ?</h2>
+      <p>QUEL EST TON MOOD AUJOURD'HUI ?</p>
     </div>
     <div class="mx-auto">
       <form
@@ -24,8 +35,8 @@
         action="/mood_update"
         method="post"
       >
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %> <%
-        User::MOODS.each_with_index do |mood, i| %>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %> 
+        <%User::MOODS.each_with_index do |mood, i| %>
         <div class="card col-5 mood-checkbox" data-for="mood-<%= i %>">
           <div class="plus">
             <p><i class="fa fa-check"></i></p>
@@ -48,18 +59,13 @@
           </h4>
         </div>
         <% end %>
-        <input class="btn btn-primary" type="submit" value="Valide tes moods" />
+        <input
+          class="btn btn-outline-primary"
+          type="submit"
+          value="Valide tes moods"
+        />
       </form>
     </div>
-    <br />
-
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
     <br />
     <br />
     <br />
@@ -67,18 +73,20 @@
 
     <div class="quests">
       <div id="top-quest">
-        <h2>CHOISIS LA QUÊTE QUI TE CORRESPOND</h2>
+        <p>CHOISIS LA QUÊTE QUI TE CORRESPOND</p>
       </div>
-      <div class="mx-auto justify-content-center row">
-        <% @quests.each do |quest| %>
+      <div class="mx-auto justify-content-center">
+        <% @quests.each do |quest| %> 
         <%= link_to quest_path(quest) do %>
-        <div class="card col-5 mood-checkbox">
+        <div class="card mood-checkbox">
           <h4><%= quest.name %></h4>
-          <p><%= quest.description %></p>
+          <h4><%= quest.description %></h4>
         </div>
-          <% end %>
+        <% end %>
         <% end %>
       </div>
+      <br />
+      <br />
     </div>
   </div>
 </div>

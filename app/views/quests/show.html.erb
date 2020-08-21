@@ -1,67 +1,61 @@
-<section class="container">
-  <div class="section-head">
-    <h4 class="title-main"><%= @quest.name%></h4>
-  </div>
-  <div class="c-wrapper">
-    <div class="text-center">
-      <%= link_to quest_flashcards_path(@quest) do %>
-        <div class="provide-item purpule-bg">
-          <img src="img/icons/icon1.png" alt="" />
-          <h4 class="w-text">Flashcards</h4>
-        </div>
-        <br />
-        <br />
-        <img
-          src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598011224/Group_3_vn8lok.png"
-          alt=""
-        />
-        <div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-        </div>
-      <% end %>
+<div class="show">
+  <div class="container">
+    <div class="section-head">
+      <h4 class="title-main"><%= @quest.name%></h4>
+      <br />
     </div>
+    <div class="c-wrapper">
+      <div class="text-center">
+        <a href=":id/flashcards.html">
+          <div class="provide-item purpule-bg">
+            <img src="img/icons/icon1.png" alt="" />
+            <h4 class="w-text">Flashcards</h4>
+          </div>
+          <br />
+          <br />
+          <img
+            src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598011224/Group_3_vn8lok.png"
+            alt=""
+          />
+          <div>
+            <br />
+            <br />
+          </div>
+        </a>
+      </div>
 
-    <div class="center-item text-center">
-      <a href=":id/videos.html">
-        <div class="provide-item pink-bg">
-          <img src="img/icons/icon2.png" alt="" />
-          <h4 class="w-text">Vidéos</h4>
-        </div>
-        <br />
-        <br />
-        <img
-          src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598011806/Capture_d_e%CC%81cran_2020-08-21_a%CC%80_14.09.54_pntgil.png"
-        />
-        <div>
+      <div class="center-item text-center">
+        <a href=":id/videos.html">
+          <div class="provide-item pink-bg">
+            <img src="img/icons/icon2.png" alt="" />
+            <h4 class="w-text">Vidéos</h4>
+          </div>
           <br />
           <br />
-          <br />
-          <br />
-          <br />
-        </div>
-      </a>
-    </div>
+          <img
+            src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598011806/Capture_d_e%CC%81cran_2020-08-21_a%CC%80_14.09.54_pntgil.png"
+          />
+          <div>
+            <br />
+            <br />
+          </div>
+        </a>
+      </div>
 
-    <div class="text-center">
-      <a href=":id/chat.html">
-        <div class="provide-item orange-bg">
-          <img src="img/icons/icon3.png" alt="" />
-          <h4 class="w-text">
-            Parler avec un.e conseiller.e
-          </h4>
-        </div>
-        <div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-        </div>
-      </a>
+      <div class="text-center">
+        <a href=":id/chat.html">
+          <div class="provide-item orange-bg">
+            <img src="img/icons/icon3.png" alt="" />
+            <h4 class="w-text">
+              Parler avec un.conseiller.e
+            </h4>
+          </div>
+          <div>
+            <br />
+            <br />
+          </div>
+        </a>
+      </div>
     </div>
   </div>
-</section>
+</div>
