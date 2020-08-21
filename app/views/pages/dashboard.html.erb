@@ -34,8 +34,8 @@
         action="/mood_update"
         method="post"
       >
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %> <%
-        User::MOODS.each_with_index do |mood, i| %>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %> 
+        <%User::MOODS.each_with_index do |mood, i| %>
         <div class="card col-5 mood-checkbox" data-for="mood-<%= i %>">
           <div class="plus">
             <p><i class="fa fa-check"></i></p>
@@ -71,16 +71,18 @@
     <br />
 
     <div class="quests">
-      <div class="top-quest">
+      <div id="top-quest">
         <p>CHOISIS LA QUÊTE QUI TE CORRESPOND</p>
       </div>
       <div class="mx-auto justify-content-center">
-        <% @quests.each do |quest| %> <%= link_to quest_path(quest) do %>
+        <% @quests.each do |quest| %> 
+        <%= link_to quest_path(quest) do %>
         <div class="card mood-checkbox">
           <h4><%= quest.name %></h4>
           <h4><%= quest.description %></h4>
         </div>
-        <% end %> <% end %>
+        <% end %>
+        <% end %>
       </div>
       <br />
       <br />
