@@ -1,0 +1,17 @@
+<div class="flash-flashcards">
+  <h4 class="title-main"><%= @quest.name%></h4>
+  <div class="container-flashcards">
+    <%= link_to "Retour", root_path, class: "btn btn-dark position-absolute" %>
+    <% @flashcards.first(3).each do |flashcard| %>
+    <ul class="cards">
+      <li class="card-question">
+        <h2> <%= flashcard.question %> </h2>
+        <div class="tip-button">
+          <p> <%= flashcard.tip %></p>
+          <button class="flashcard-button", type="button">Suivant</button>
+        </div>
+      </li>
+    </ul>
+    <% end %>
+  </div>
+</div>
