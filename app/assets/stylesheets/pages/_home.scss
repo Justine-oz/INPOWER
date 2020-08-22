@@ -1,1 +1,95 @@
 // Specific CSS for your home-page
+.homepage {
+  body {
+    background: #131313;
+  }
+
+  h1 {
+    font-family: Asap;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 95px;
+    line-height: 57px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  img .ligne {
+    /* position: absolute;
+  width: 256.26px;
+  height: 1.97px;
+  left: 58.34px;
+  top: 196.53px;*/
+  }
+
+  .p.home-text {
+    /* position: absolute;
+  width: 303px;
+  height: 104px; */
+
+    font-family: Asap;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 63px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .btn-flat {
+    background-color: #78bdb3;
+    color: white;
+    padding: 25px 30px;
+    border-radius: 4px;
+
+    font-family: Didact Gothic;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 40px;
+    width: 160px;
+    text-align: center;
+    box-shadow: 2px 2px 6px #78bdb3;
+    font-size: 60px;
+  }
+
+  .p-rel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+  }
+
+  .p-abs {
+    position: absolute;
+  }
+
+  .stroke-bvn {
+    top: 60px;
+    width: 440px;
+    height: 400px;
+  }
+
+  .mt-5 {
+    margin-top: 85px;
+  }
+
+  .home-img {
+    background-image: url(images/nos_mains7.png);
+    width: 400px;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .logo-home {
+    background-image: url(images/logo.svg);
+    width: 180px;
+    height: 170px;
+    /*background-position: center;*/
+    background-size: cover;
+    margin-left: 15px;
+  }
+}
