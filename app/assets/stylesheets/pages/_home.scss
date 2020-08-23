@@ -1,38 +1,23 @@
 // Specific CSS for your home-page
 .homepage {
-  body {
-    background: #131313;
-  }
-
+  background: #4f6aa4;
   h1 {
     font-family: Asap;
     font-style: normal;
     font-weight: bold;
-    font-size: 95px;
-    line-height: 57px;
+    font-size: 32px;
+    line-height: 94px;
     text-align: center;
-
+    padding-block: 10px;
     color: #ffffff;
   }
 
-  img .ligne {
-    /* position: absolute;
-  width: 256.26px;
-  height: 1.97px;
-  left: 58.34px;
-  top: 196.53px;*/
-  }
-
-  .p.home-text {
-    /* position: absolute;
-  width: 303px;
-  height: 104px; */
-
+  .home-text {
     font-family: Asap;
-    font-weight: 300;
-    font-size: 60px;
-    line-height: 63px;
-    text-align: center;
+    font-size: 17px;
+    line-height: 40px;
+    text-align: justify;
+    margin: 30px;
 
     color: #ffffff;
   }
@@ -40,17 +25,16 @@
   .btn-flat {
     background-color: #78bdb3;
     color: white;
-    padding: 25px 30px;
+    padding: 10px 12px;
     border-radius: 4px;
-
     font-family: Didact Gothic;
     color: #ffffff;
     text-decoration: none;
-    border-radius: 40px;
-    width: 160px;
+    border-radius: 30px;
+    width: 17px;
     text-align: center;
     box-shadow: 2px 2px 6px #78bdb3;
-    font-size: 60px;
+    font-size: 18px;
   }
 
   .p-rel {
@@ -59,7 +43,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
+    height: 120vh;
   }
 
   .p-abs {
@@ -67,29 +51,19 @@
   }
 
   .stroke-bvn {
-    top: 60px;
-    width: 440px;
-    height: 400px;
+    top: 20px;
+    width: 150px;
+    height: 220px;
   }
 
   .mt-5 {
-    margin-top: 85px;
+    margin-top: 5px;
   }
 
   .home-img {
-    background-image: url(images/nos_mains7.png);
-    width: 400px;
-    height: 400px;
-    background-position: center;
+    background-image: url("https://res.cloudinary.com/dqymzh7jc/image/upload/v1598096637/nos_mains7_yhyw9a.png");
+    width: 160px;
+    height: 110px;
     background-size: cover;
-  }
-
-  .logo-home {
-    background-image: url(images/logo.svg);
-    width: 180px;
-    height: 170px;
-    /*background-position: center;*/
-    background-size: cover;
-    margin-left: 15px;
   }
 }
