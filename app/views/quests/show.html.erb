@@ -22,38 +22,36 @@
       <% end %>
     </div>
     <div class="center-item text-center">
-      <a href=":id/videos.html">
-        <div class="item two">
-          <img src="img/icons/icon2.png" alt="" />
-          <h4 class="categories">Vidéos</h4>
-        </div>
-        <br />
-        <br />
-        <img
-          src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598011806/Capture_d_e%CC%81cran_2020-08-21_a%CC%80_14.09.54_pntgil.png"
-        />
-        <br />
-        <br />
-        <br />
-      </a>
+      <%= link_to quest_videos_path(@quest) do %>
+      <div class="item two">
+        <img src="img/icons/icon2.png" alt="" />
+        <h4 class="categories">Vidéos</h4>
+      </div>
+      <br />
+      <br />
+      <img
+        src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598011806/Capture_d_e%CC%81cran_2020-08-21_a%CC%80_14.09.54_pntgil.png"
+      />
+      <br />
+      <br />
+      <br />
+      <% end %>
     </div>
     <div class="center-item text-center">
-      <a href=":id/chat.html">
-        <div class="item three">
-          <h4 class="categories">Parler avec un.e conseillèr.e</h4>
-        </div>
-        <br />
-        <br />
-        <img
-          src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598178050/mains_6_oq1rqm.png"
-          alt=""
-          style="height: 200px;"
-          ;
-        />
-        <br />
-        <br />
-        <br />
-      </a>
+      <div class="item three">
+        <h4 class="categories">Parler avec un.e conseillèr.e</h4>
+      </div>
+      <br />
+      <br />
+      <img
+        src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598178050/mains_6_oq1rqm.png"
+        alt=""
+        style="height: 200px;"
+        ;
+      />
+      <br />
+      <br />
+      <br />
     </div>
   </div>
 </div>
