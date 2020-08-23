@@ -9,4 +9,8 @@ class QuestsController < ApplicationController
     @flashcards = @quest.flashcards
   end
 
+  def videos
+    @quest = Quest.find(params[:quest_id])
+    @videos = @quest.videos
+  end
 end
