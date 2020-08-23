@@ -1,93 +1,88 @@
 <div class="dash">
-<div class="viewport">
-  <div class="container">
-    <div class="welcome">
-      <br />
-      <img
-        src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598015260/Group_4_bmuzq6.svg"
-        alt=""
-        class="center"
-      />
-      <div class="innerpower">
-        <h2>
-          Aujourd’hui, Vendredi 21 Août, voici<br />
-          à quoi ressemble ton <strong>inner powær</strong>
-        </h2>
+  <div class="viewport">
+      <div class="welcome">
+        <br />
         <img
-        src="https://image.freepik.com/free-vector/superhero-speed-hero-super-beast-comic-books-characters-action-pose-3-vertical-banners-blue-background_1284-32329.jpg"
-        alt="" style="widows: 450px; height:235px;>
-      </div>
-      <div class="innerpower-details">
-        <img
-          src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598015943/Group_4_1_adike2.svg"
+          src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598015260/Group_4_bmuzq6.svg"
           alt=""
+          class="center"
         />
-      </div>
-      <!-- div img  et p dessus-->
-    </div>
-    <br />
-    <div class="title">
-      <p>QUEL EST TON MOOD AUJOURD'HUI ?</p>
-    </div>
-    <div class="mx-auto">
-      <form
-        class="justify-content-center row form-choice"
-        action="/mood_update"
-        method="post"
-      >
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %> 
-        <%User::MOODS.each_with_index do |mood, i| %>
-        <div class="card col-5 mood-checkbox" data-for="mood-<%= i %>">
-          <div class="plus">
-            <p><i class="fa fa-check"></i></p>
-          </div>
-          <input
-            class="input-checkbox"
-            type="checkbox"
-            hidden
-            id="mood-<%= i %>"
-            name="<%= mood %>"
+          <h2>
+            Aujourd’hui, Vendredi 21 Août, voici<br />
+            à quoi ressemble ton <strong>inner powær</strong>
+          </h2>
+          <img
+          src="https://image.freepik.com/free-vector/superhero-speed-hero-super-beast-comic-books-characters-action-pose-3-vertical-banners-blue-background_1284-32329.jpg"
+          alt="" style="widows: 450px; height:260px;>
+        <div class="innerpower-details">
+          <img
+            src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598015943/Group_4_1_adike2.svg"
+            alt=""
           />
-          <h4>
-            <label
-              class="mood-checkbox"
-              for="<%= mood %>"
-              data-for="mood-<%= i %>"
-            >
-              <%= mood %>
-            </label>
-          </h4>
-        </div>
-        <% end %>
-        <input
-          class="btn btn-outline-primary"
-          type="submit"
-          value="Valide tes moods"
-        />
-      </form>
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
+      <br />
+      <div class="title">
+        <p>QUEL EST TON MOOD AUJOURD'HUI ?</p>
+      </div>
+      <div class="mx-auto">
+        <form
+          class="justify-content-center row form-choice"
+          action="/mood_update"
+          method="post"
+        >
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <%User::MOODS.each_with_index do |mood, i| %>
+          <div class="card col-5 mood-checkbox" data-for="mood-<%= i %>">
+            <div class="plus">
+              <p><i class="fa fa-check"></i></p>
+            </div>
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              hidden
+              id="mood-<%= i %>"
+              name="<%= mood %>"
+            />
+            <h4>
+              <label
+                class="mood-checkbox"
+                for="<%= mood %>"
+                data-for="mood-<%= i %>"
+              >
+                <%= mood %>
+              </label>
+            </h4>
+          </div>
+          <% end %>
+          <input
+            class="btn btn-outline-primary"
+            type="submit"
+            value="Valide tes moods"
+          />
+        </form>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
 
-    <div class="quests">
-      <div id="top-quest">
-        <p>CHOISIS LA QUÊTE QUI TE CORRESPOND</p>
-      </div>
-      <div class="mx-auto justify-content-center">
-        <% @quests.each do |quest| %> 
-        <%= link_to quest_path(quest) do %>
-        <div class="card mood-checkbox">
-          <h4><%= quest.name %></h4>
-          <h4><%= quest.description %></h4>
+      <div class="quests">
+        <div id="top-quest">
+        <div class="title">
+          <p>CHOISIS LA QUÊTE QUI TE CORRESPOND</p>
         </div>
-        <% end %>
-        <% end %>
+        </div>
+        <div class="mx-auto justify-content-center">
+          <% @quests.each do |quest| %>
+            <%= link_to quest_path(quest) do %>
+          <div class="card mood-checkbox">
+            <h4><%= quest.name %></h4>
+            <h4><%= quest.description %></h4>
+          </div>
+          <% end %> 
+          <% end %>
+        </div>
+        <br />
+        <br />
       </div>
-      <br />
-      <br />
-    </div>
   </div>
-</div>
 </div>
