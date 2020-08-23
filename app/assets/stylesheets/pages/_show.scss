@@ -1,35 +1,35 @@
 .categories {
   color: white;
-  text-decoration: none;
-  font-weight: 400;
-  outline: none;
+  font-size: 20px;
+  font-weight: 300;
+  padding-bottom: 15px;
 }
 
 .params-show {
   display: flex;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 10px;
   .title-main {
     font-family: asap;
-    margin: 0;
-    font-size: 16px;
+    font-size: 26px;
     color: black;
     flex: 8;
+    padding-bottom: 20px;
   }
 }
 
 .one {
   background: #260b9d;
+  border-block: 20px;
+  border-radius: 20px;
 }
 .two {
-  background: #78bdb3 !important;
+  background: #78bdb3;
+  border-block: 20px;
+  border-radius: 20px;
 }
 .three {
   background: #000000;
-}
-
-.item {
-  padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
+  padding-top: 20px;
 }
