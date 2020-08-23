@@ -1,0 +1,65 @@
+<div class="flash-videos">
+  <h4 class="title-main"><%= @quest.name%></h4>
+  <!-- <div class="container-videos"> -->
+    <%= link_to "Retour", quest_path(@quest), class: "btn btn-dark position-absolute" %>
+    <br>
+    <br>
+    <% @videos.first(4).each do |video| %>
+    <!-- <ul class="cards">
+      <li class="card-question">
+        <h2> <%= video.name %> </h2>
+        <div class="tip-button">
+          <p> <%= video.description %></p>
+          <iframe width="560" height="315" src="<%= video.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button class="flashcard-button", type="button">Suivant</button>
+        </div>
+      </li> -->
+<!--     </ul> -->
+<!--   </div> -->
+<!-- </div> -->
+
+
+
+<div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating" href="#carousel-example-multi" data-slide="prev"><i
+        class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#carousel-example-multi" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="1"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="2"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="3"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="4"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="5"></li>
+  </ol>
+  <!--/.Indicators-->
+
+  <div class="carousel-inner v-2" role="listbox">
+
+    <div class="carousel-item active">
+      <div class="col-12 col-md-4">
+        <div class="card mb-2">
+          <iframe width="560" height="315" src="<%= video.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold"><%= video.name %></h4>
+            <p class="card-text"><%= video.description %></p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<% end %>
+</div>
+

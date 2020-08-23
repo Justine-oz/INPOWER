@@ -28,7 +28,7 @@
     </div>
 
       <div class="center-item text-center">
-        <a href=":id/videos.html">
+        <%= link_to quest_videos_path(@quest) do %>
           <div class="provide-item pink-bg">
             <img src="img/icons/icon2.png" alt="" />
             <h4 class="w-text">Vidéos</h4>
@@ -42,7 +42,7 @@
             <br />
             <br />
           </div>
-        </a>
+        <% end %>
       </div>
 
       <div class="text-center">

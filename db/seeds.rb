@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Flashcard.destroy_all
+Video.destroy_all
 Quest.destroy_all
 User.destroy_all
 
@@ -13,16 +14,16 @@ user1 = User.create(email: 'test@test.fr', password: '123456', moods: ["Incompri
 
 
 quests = [
-  {name: "Savoir dire non", description: "...", moods:["Jaloux.se", "Incompris.e", "Amoureux.se", "Fort.e", "Trahi.e", "Je ne sais pas"], flashcards_nums: [9, 4, 18, 77, 75, 74, 72, 71, 68, 65, 62, 60, 26, 27, 28, 30, 31, 34, 35, 38, 41, 42, 43, 45, 46, 47, 48, 49, 50, 8]},
-  {name: "Garder mon calme", description: "...", moods:["Stressé.e", "En colère", "Amoureux.se", "Honteux.se"], flashcards_nums: [2, 3]},
-  # {name: "Avoir confiance en moi", description: "...", moods:["Jaloux.se", "Stressé.e", "Seul.e", "Amoureux.se", "Honteux.se"], flashcards_nums: [3, 4,]}
+  {name: "Savoir dire non", description: "...", moods:["Jaloux.se", "Incompris.e", "Amoureux.se", "Fort.e", "Trahi.e", "Je ne sais pas"], flashcards_nums: [9, 4, 18, 77, 75, 74, 72, 71, 68, 65, 62, 60, 26, 27, 28, 30, 31, 34, 35, 38, 41, 42, 43, 45, 46, 47, 48, 49, 50, 8], videos_nums: [1, 6, 7, 5, 2, 8]},
+  {name: "Garder mon calme", description: "...", moods:["Stressé.e", "En colère", "Amoureux.se", "Honteux.se"], flashcards_nums: [2, 3], videos_nums: [1, 5, 3, 4]},
+  # {name: "Avoir confiance en moi", description: "...", moods:["Jaloux.se", "Stressé.e", "Seul.e", "Amoureux.se", "Honteux.se"], flashcards_nums: [3, 4]}
   # {name: "Pouvoir dire 'je t'aime'", description: "...", moods:["Optimiste", "Amoureux.se", "Fort.e", "Honteux.se"]},
   # {name: "Aller vers les autres", description: "...", moods:["Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Honteux.se"]},
   # {name: "Pouvoir faire confiance", description: "...", moods:["Jaloux.se", "En colère", "Seul.e", "Amoureux.se", "Fort.e"]},
   # {name: "Me faire respecter", description: "...", moods:["Incompris.e", "Seul.e", "Amoureux.se", "Honteux.se", "Trahi.e"]},
   # {name: "Prendre de la distance", description: "...", moods:["Stressé.e", "Jaloux.se", "En colère", "Optimiste", "Amoureux.se", "Fort.e", "Honteux.se", "Trahi.e", "Sûr.e de moi"]},
   # {name: "Lâcher prise", description: "...", moods:["Stressé.e", "Incompris.e", "En colère", "Amoureux.se", "Fort.e", "Honteux.se", "Trahi.e", "Je ne sais pas"]},
-  {name: "Partager mes émotions", description: "...", moods:["Jaloux.se", "Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Honteux.se", "Trahi.e", "Sûr.e de moi", "Je ne sais pas"], flashcards_nums: [1, 2, 3, 5, 6, 7, 78, 76, 73, 70, 69, 66, 64, 59, 56, 58, 54, 55, 17, 20, 21, 25, 29, 32, 33, 36, 37, 39, 40, 44]},
+  {name: "Partager mes émotions", description: "...", moods:["Jaloux.se", "Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Honteux.se", "Trahi.e", "Sûr.e de moi", "Je ne sais pas"], flashcards_nums: [1, 2, 3, 5, 6, 7, 78, 76, 73, 70, 69, 66, 64, 59, 56, 58, 54, 55, 17, 20, 21, 25, 29, 32, 33, 36, 37, 39, 40, 44], videos_nums: [6, 7, 3, 4, 8]},
   # {name: "Être fier.e de moi", description: "...", moods:["Stressé.e", "Incompris.e", "Seul.e", "Amoureux.se", "Fort.e"]},
   # {name: "Communiquer ma bonne humeur", description: "...", moods:["Optimiste", "Amoureux.se", "Sûr.e de moi", "Fort.e"]},
   # {name: "Gérer les conflits", description: "...", moods:["Jaloux.se", "Incompris.e", "En colère", "Amoureux.se", "Honteux.se", "Trahi.e", "Sûr.e de moi"]}
@@ -111,11 +112,27 @@ flashcards = [
   {num: 78, question: "Appelle quelqu’un que tu admires et dis-lui pourquoi tu l’apprécies.", tip: "Tu as fait ta BA de la journée !"},
   ]
 
+
+
+videos = [
+  {num: 1, name: "Libérez-vous", description: "Comment se libérer des 'il faut, je dois' ? Thomas d'Ansembourg", url: "https://www.youtube.com/embed/W8t5-tW_FaM"},
+  {num: 2, name: "Reconnaître ses besoins", description: "Comment reconnaître vos besoins pour aller vers la vie que vous souhaitez ? Thomas d'Ansembourg", url: "https://www.youtube.com/embed/m81GG7TN4wM"},
+  {num: 3, name: "Ecoute", description: "Soyez sceptique, mais apprenez à écouter - Le 5e accord toltèque expliqué - Gabin Bellet", url: "https://www.youtube.com/embed/c3Jl6wX04rk"},
+  {num: 4, name: "Motivation", description: "Vidéo de motivation - Je vais tout donner, David Laroche !", url: "https://www.youtube.com/embed/CWKvYHNl4Q8"},
+  {num: 5, name: "La peur", description: "Et si on arrêtait d'avoir peur ? | Margaux Hammann | TEDxReims", url: "https://www.youtube.com/embed/xKSSEHbRXcM"},
+  {num: 6, name: "La confiance", description: "Manque de confiance : comprendre le cerveau pour l’affronter | Lisa Lai | TEDxINSA", url: "https://www.youtube.com/embed/LYjzHayRaes"},
+  {num: 7, name: "Homme/Femme", description: "Repenser nos rapports femmes-hommes | Emma (pseudo) | TEDxLille", url: "https://www.youtube.com/embed/pxfgiSvcH0o"},
+  {num: 8, name: "La Liberté sexuelle", description: "La liberté sexuelle en question: Catherine Blanc at TEDxParis 2013", url: "https://www.youtube.com/embed/13razgR8q7g"}
+]
+
+
 puts "Creating quests"
 
 quests.each do |quest|
   puts "Creating quest #{quest[:name]}"
   flashcards_nums = quest[:flashcards_nums]
+  videos_nums = quest[:videos_nums]
+  quest.delete(:videos_nums)
   quest.delete(:flashcards_nums)
   new_quest = Quest.create!(quest)
   flashcards_nums.each do |flashcard_num|
@@ -128,9 +145,17 @@ quests.each do |quest|
     flashcard_attributes[:quest] = new_quest
     Flashcard.create!(flashcard_attributes)
   end
+  videos_nums.each do |video_num|
+    puts "Creating video #{video_num}"
+    attributes = videos.select { |video| video[:num] == video_num }.first
+    video_attributes = {
+      name: attributes[:name],
+      description: attributes[:description],
+      url: attributes[:url]
+    }
+    video_attributes[:quest] = new_quest
+    Video.create!(video_attributes)
+  end
 end
 
 puts "done"
-
-
-
