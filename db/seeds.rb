@@ -23,7 +23,7 @@ quests = [
   # {name: "Me faire respecter", description: "...", moods:["Incompris.e", "Seul.e", "Amoureux.se", "Honteux.se", "Trahi.e"]},
   # {name: "Prendre de la distance", description: "...", moods:["Stressé.e", "Jaloux.se", "En colère", "Optimiste", "Amoureux.se", "Fort.e", "Honteux.se", "Trahi.e", "Sûr.e de moi"]},
   # {name: "Lâcher prise", description: "...", moods:["Stressé.e", "Incompris.e", "En colère", "Amoureux.se", "Fort.e", "Honteux.se", "Trahi.e", "Je ne sais pas"]},
-  {name: "Partager mes émotions", description: "...", moods:["Jaloux.se", "Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Honteux.se", "Trahi.e", "Sûr.e de moi", "Je ne sais pas"], flashcards_nums: [1, 2, 3, 5, 6, 7, 78, 76, 73, 70, 69, 66, 64, 59, 56, 58, 54, 55, 17, 20, 21, 25, 29, 32, 33, 36, 37, 39, 40, 44], videos_nums: [6, 7, 3, 4, 8]},
+  {name: "Partager mes émotions", description: "...", moods:["Jaloux.se", "Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Honteux.se", "Trahi.e", "Sûr.e de moi", "Je ne sais pas"], flashcards_nums: [1, 2, 3, 5, 6, 7, 78, 76, 73, 70, 69, 66, 64, 59, 56, 58, 54, 55, 17, 20, 21, 25, 29, 32, 33, 36, 37, 39, 40, 44], videos_nums: [6, 7, 3, 4, 8, 2]},
   # {name: "Être fier.e de moi", description: "...", moods:["Stressé.e", "Incompris.e", "Seul.e", "Amoureux.se", "Fort.e"]},
   # {name: "Communiquer ma bonne humeur", description: "...", moods:["Optimiste", "Amoureux.se", "Sûr.e de moi", "Fort.e"]},
   # {name: "Gérer les conflits", description: "...", moods:["Jaloux.se", "Incompris.e", "En colère", "Amoureux.se", "Honteux.se", "Trahi.e", "Sûr.e de moi"]}
