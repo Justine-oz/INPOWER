@@ -29,12 +29,12 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initCheckboxes } from '../components/init_checkboxes';
 import { flashCards } from '../components/flashcards';
-import { videosCarousel } from '../components/videos';
+// import { videosCarousel } from '../components/videos';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initCheckboxes();
   flashCards();
-  videosCarousel();
+  // videosCarousel();
 });
