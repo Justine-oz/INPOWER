@@ -1,99 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
 .dash {
   .viewport {
-    background: linear-gradient(90deg, #d4f6f7, #f4ecd9, #9a9ed6);
+    background: #4f6aa4;
     background-size: 200% 200%;
     height: auto;
     width: 100%;
-    -webkit-animation: AnimationName 10s ease infinite;
-    -moz-animation: AnimationName 10s ease infinite;
-    animation: AnimationName 10s ease infinite;
+  }
+
+  .welcome {
+    border: 25px solid white;
   }
 
   h3 {
     font-family: asap;
-    color: rgb(1, 0, 0);
+    color: rgb(239, 240, 211);
     font-weight: 400;
-    font-size: 15px;
+    font-size: 25px;
     line-height: 90%;
     padding-bottom: 60px;
     padding-top: 120px;
     text-align: justify;
   }
 
-  @-webkit-keyframes AnimationName {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  @-moz-keyframes AnimationName {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  @keyframes AnimationName {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  .card h4 {
-    font-family: asap;
-    margin: 0px;
-    color: black;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 90%;
-    padding-left: 8%;
-    padding-top: 8%;
-    padding-bottom: 3%;
-    cursor: pointer;
-    transition: ease 1s;
-    -webkit-transition: ease 1s;
-  }
-
   h1 {
-    font-family: asap;
-    color: rgb(1, 0, 0);
+    font-family: "Abril Fatface", cursive;
+    color: rgb(252, 252, 252);
     font-weight: 400;
-    font-size: 28px;
-    line-height: 90%;
-    padding-bottom: 60px;
-    padding-top: 120px;
+    font-size: 35px;
+    letter-spacing: 10px;
+    line-height: 150%;
+    padding-bottom: 45vh;
+    padding-top: 45vh;
     position: relative;
     text-align: center;
+  }
+  h1 span {
+    background-image: linear-gradient(120deg, #78bdb3 100%, #78bdb3 100%);
+    background-position: 0 76%;
+    background-size: 100% 0.35em;
+    background-repeat: no-repeat;
   }
 
   h2 {
     font-family: asap;
-    color: rgb(1, 0, 0);
+    color: rgb(239, 240, 211);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 23px;
     line-height: 90%;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-align: center;
-    border-width: 2px;
-    border-color: #260b9d;
-    border-style: solid;
-    border-radius: 10px;
+    text-align: justify;
+    width: 88%;
+    margin: auto;
   }
 
   .center {
@@ -103,10 +62,15 @@
     width: 100%;
   }
 
-  .btn {
-    color: #260b9d;
-    border-color: #260b9d;
-    box-shadow: 2px 2px 6px #78bdb3;
+  .btn-dash {
+    background-color: #78bdb3;
+    font-family: asap;
+    font-size: 22px;
+    color: white;
+    border-color: #4f6aa4;
+    font-weight: bold;
+    border: 3px solid #78bdb3;
+    border-radius: 10px;
     padding: 10px 12px;
   }
 
@@ -114,7 +78,7 @@
     width: 78%;
     margin: auto;
     font-family: asap;
-    color: rgb(1, 0, 0);
+    color: rgb(239, 240, 211);
     font-weight: 400;
     font-size: 18px;
     line-height: 90%;
@@ -127,7 +91,7 @@
     width: 78%;
     margin: auto;
     font-family: asap;
-    color: rgb(1, 0, 0);
+    color: rgb(239, 240, 211);
     font-weight: 400;
     font-size: 18px;
     line-height: 90%;
@@ -142,10 +106,15 @@
   }
 
   .card {
-    height: 120px;
-    background-color: white;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     margin: 1.13%;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: 1s;
     -webkit-transition: 0.5s;
     cursor: pointer;
@@ -162,10 +131,18 @@
     background-size: cover;
   }
 
-  .active .fa-check {
-    color: #78bdb3;
+  .active {
+    h4 span {
+      background-image: linear-gradient(120deg, #78bdb3 100%, #78bdb3 100%);
+      background-position: 0 91%;
+      background-size: 100% 0.35em;
+      background-repeat: no-repeat;
+    }
   }
 
+  .active.card {
+    border: 3px solid #78bdb3;
+  }
   .plus {
     width: 20px;
     height: 20px;
@@ -185,6 +162,128 @@
     top: 45.3%;
     transform: translate(-50%, -50%);
     position: absolute;
-    color: white;
+    color: #4f6aa4;
   }
+
+  .image-hero {
+    height: 45vh;
+    object-fit: cover;
+    margin: 2px;
+    width: 75vw;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .mains-sizing {
+    height: 175px;
+    margin-left: 25%;
+  }
+
+  .btnspace {
+    margin-top: 50px;
+  }
+
+  .whitespace {
+    height: 15vh;
+  }
+  .app {
+    padding: var(--gutter) 0;
+    display: grid;
+    grid-gap: var(--gutter) 0;
+    grid-template-columns: var(--gutter) 1fr var(--gutter);
+    align-content: start;
+  }
+  .app > * {
+    grid-column: 2 / -2;
+  }
+  .app > .full {
+    grid-column: 1 / -1;
+  }
+  .hs {
+    display: grid;
+    grid-gap: calc(var(--gutter) / 2);
+    grid-template-columns: 10px repeat(6, calc(50% - var(--gutter) * 2)) 10px;
+    grid-template-rows: minmax(150px, 1fr);
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-bottom: calc(0.75 * var(--gutter));
+    margin-bottom: calc(-0.5 * var(--gutter));
+  }
+  .hs:before,
+  .hs:after {
+    content: "";
+  }
+  /* Hide scrollbar */
+  .hide-scroll {
+    overflow-y: hidden;
+    margin-bottom: calc(-0.1 * var(--gutter));
+  }
+  /* Demo styles */
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    display: grid;
+    place-items: center;
+    background: #456173;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .app {
+    overflow-y: scroll;
+  }
+  .hs > li,
+  .item {
+    scroll-snap-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+// .inset-text {
+//   font-weight: bolder;
+//   /* Shadows are visible under slightly transparent text color */
+//   color: rgba(10, 60, 150, 0.6);
+//   text-shadow: 1px 2px 4px #4f6aa4, 0 0 0 #000, 1px 2px 4px #4f6aa4;
+// }
+// /* Don't show shadows when selecting text */
+// ::-moz-selection {
+//   background: #6a83b6;
+//   color: #6f88ba;
+//   text-shadow: none;
+// }
+// ::selection {
+//   background: #6a83b6;
+//   color: #6f88ba;
+//   text-shadow: none;
+// }
+
+.inset-text {
+  font-family: "Abril Fatface", cursive;
+  font-size: 20px;
+  margin: 0;
+  /* Shadows are visible under slightly transparent text color */
+  color: #fff;
+  text-shadow: 1px 4px 6px rgba(255, 255, 255, 0), 0 0 0 #000,
+    1px 4px 6px rgba(255, 255, 255, 0);
+}
+/* Don't show shadows when selecting text */
+::-moz-selection {
+  background: #5af;
+  color: rgba(255, 255, 255, 0);
+  text-shadow: none;
+}
+::selection {
+  background: #5af;
+  color: rgba(255, 255, 255, 0);
+  text-shadow: none;
+}
+
+.mood-checkbox {
+  margin-bottom: 0;
 }
