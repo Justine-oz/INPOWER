@@ -1,38 +1,54 @@
 <div class="app">
   <h4><%= @quest.name%></h4>
 
-  <!--   <%= link_to "Retour", quest_path(@quest), class: "btn btn-dark position-absolute" %>
-    <br>
-    <br> -->
-  <div id="accordion">
-    <% @videos.first(4).each_with_index do |video, index| %> <% id =
-    "video-#{video.id}" %>
-    <div class="item-videos" id="headingOne">
+  <div class="full hide-scroll">
+    <div class="progress">
       <div
-        class="btn btn-link"
-        data-toggle="collapse"
-        data-target="#<%= id %>"
-        aria-expanded="false"
-        aria-controls="<%= id %>"
-      >
-        <h4 class="card-title font-weight-bold"><%= video.name %></h4>
-      </div>
-      <div
-        id="<%= id %>"
-        class="collapse"
-        aria-labelledby="headingOne"
-        data-parent="#accordion"
-      >
-        <iframe
-          width="500"
-          class="videos"
-          src="<%= video.url %>"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
+        class="progress-bar bg-success"
+        id="video-progress"
+        role="progressbar"
+        style="width: <%= @progress %>%"
+        aria-valuenow="<%= @progress %>"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        data-total="<%= @total_videos %>"
+        data-counter="<%= @done_videos_count %>"
+      ></div>
     </div>
-    <% end %>
+
+    <div id="accordion">
+      <% @videos.first(4).each_with_index do |video, index| %> 
+      <% id="video-#{video.id}" %> 
+      <% clicked = VideosExecution.find_by(user_quest: @userquest, video: video).present? %> 
+      <div class="item-videos" id="headingOne">
+        <div
+          class="btn btn-link"
+          data-toggle="collapse"
+          data-clicked="<%= clicked %>"
+          data-target="#<%= id %>"
+          aria-expanded="false"
+          aria-controls="<%= id %>"
+          data-url="<%= videos_progress_url(@userquest, video) %>"
+        >
+          <h4 class="card-title font-weight-bold"><%= video.name %></h4>
+        </div>
+        <div
+          id="<%= id %>"
+          class="collapse"
+          aria-labelledby="headingOne"
+          data-parent="#accordion"
+        >
+          <iframe
+            width="500"
+            class="videos"
+            src="<%= video.url %>"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <% end %>
+    </div>
   </div>
 </div>

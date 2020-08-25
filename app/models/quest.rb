@@ -1,7 +1,7 @@
 class Quest < ApplicationRecord
-  has_many :user_quests
-  has_many :flashcards
-  has_many :videos
+  has_many :user_quests, dependent: :destroy
+  has_many :flashcards, dependent: :destroy
+  has_many :videos, dependent: :destroy
 
   def self.find_by_moods(user_moods)
     # afficher moods rentrés par user : current_user.moods
