@@ -4,19 +4,35 @@
   <!--   <%= link_to "Retour", quest_path(@quest), class: "btn btn-dark position-absolute" %>
     <br>
     <br> -->
-
- <div class="full hide-scroll">
-
-    <ul class="hs">
-      <% @videos.first(4).each do |video| %>
-      <li class="item-videos">
-      <iframe width="120" class="videos" src="<%= video.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <h4 class="card-title font-weight-bold"><%= video.name %></h4>
-      </li>
-      <% end %>
-    </ul>
-
+  <div id="accordion">
+    <% @videos.first(4).each_with_index do |video, index| %> <% id =
+    "video-#{video.id}" %>
+    <div class="item-videos" id="headingOne">
+      <div
+        class="btn btn-link"
+        data-toggle="collapse"
+        data-target="#<%= id %>"
+        aria-expanded="false"
+        aria-controls="<%= id %>"
+      >
+        <h4 class="card-title font-weight-bold"><%= video.name %></h4>
+      </div>
+      <div
+        id="<%= id %>"
+        class="collapse"
+        aria-labelledby="headingOne"
+        data-parent="#accordion"
+      >
+        <iframe
+          width="500"
+          class="videos"
+          src="<%= video.url %>"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <% end %>
   </div>
-  </div>
-
-
+</div>
