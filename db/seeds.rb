@@ -10,8 +10,9 @@ Video.destroy_all
 Quest.destroy_all
 User.destroy_all
 
-user1 = User.create(email: 'test@test.fr', password: '123456', moods: ["Incompris.e"])
+user1 = User.create(email: 'test@test.fr', password: '123456', nickname: "Lu", moods: ["Incompris.e"])
 
+admin = User.create(email: 'admin@admin.fr', password: 'admin1234', admin: true)
 
 quests = [
   {name: "Savoir dire non", description: "...", moods:["Jaloux.se", "Incompris.e", "Amoureux.se", "Fort.e", "Trahi.e", "Je ne sais pas"], flashcards_nums: [9, 4, 18, 77, 75, 74, 72, 71, 68, 65, 62, 60, 26, 27, 28, 30, 31, 34, 35, 38, 41, 42, 43, 45, 46, 47, 48, 49, 50, 8], videos_nums: [1, 7, 5, 8]},
