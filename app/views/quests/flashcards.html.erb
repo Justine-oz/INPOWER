@@ -1,20 +1,27 @@
-<div class="flash-flashcards">
-  <h2 class="title-main"><%= @quest.name%></h2>
-  <div class="progress">
-    <div class="progress-bar bg-success" id="flashcard-progress" role="progressbar" style="width: <%= @progress %>%" aria-valuenow="<%= @progress %>" aria-valuemin="0" aria-valuemax="100" data-total="<%= @total_flashcards %>" data-counter="<%= @done_flashcards_count %>"></div>
-  </div>
-  <div class="container-flashcards">
-    <%= link_to "Retour", root_path, class: "btn btn-dark float-right" %>
-    <% @flashcards.each do |flashcard| %>
-      <ul class="cards">
-        <li class="card-question">
-          <h2><%= flashcard.question %></h2>
-          <div class="tip-button">
-            <p><%= flashcard.tip %></p>
-            <button class="flashcard-button" data-url="<%= flashcards_progress_url(@userquest, flashcard) %>" type="button">Suivant</button>
-          </div>
-        </li>
-      </ul>
-    <% end %>
+<div class="app">
+  <div class="welcome">
+    <div class="flash-flashcards">
+      <div class="title-button2 d-flex">
+        <span><h4 class="title-main2"><%= @quest.name%></h4></span>
+        <%= link_to "Retour", quest_path(@quest), class: "btn btn-dark float-right" %>
+      </div>
+      <div class="whitespace"></div>
+      <div class="progress">
+        <div class="progress-bar bg-success" id="flashcard-progress" role="progressbar" style="width: <%= @progress %>%" aria-valuenow="<%= @progress %>" aria-valuemin="0" aria-valuemax="100" data-total="<%= @total_flashcards %>" data-counter="<%= @done_flashcards_count %>"></div>
+      </div>
+      <div class="container-flashcards">
+        <% @flashcards.each do |flashcard| %>
+          <ul class="cards">
+            <li class="card-question">
+              <h2><%= flashcard.question %></h2>
+              <div class="tip-button">
+                <p><%= flashcard.tip %></p>
+                <button class="flashcard-button" data-url="<%= flashcards_progress_url(@userquest, flashcard) %>" type="button">Suivant</button>
+              </div>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
