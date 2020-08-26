@@ -3,11 +3,21 @@
 }
 .categories {
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 300;
-  padding-bottom: 15px;
+  padding-top: 25px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.cat {
+  position: relative;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+}
 .title-main {
   font-family: "Abril Fatface", cursive;
   color: rgb(252, 252, 252);
@@ -15,26 +25,39 @@
   font-size: 28px;
   letter-spacing: 10px;
   line-height: 150%;
-  padding-bottom: 15vh;
-  padding-top: 15vh;
+  padding-bottom: 10vh;
+  padding-top: 10vh;
   position: relative;
   text-align: center;
   text-decoration: underline;
   text-decoration-color: #78bdb3;
 }
 
+
 .one {
-  background: #260b9d;
-  border-block: 20px;
-  border-radius: 20px;
+  width: 360px;
+  height: 80px;
+  background: #4f6aa4;
+  border: 3px solid #78bdb3;
+  border-radius: 10px;
 }
 .two {
-  background: #78bdb3;
-  border-block: 20px;
-  border-radius: 20px;
+  width: 360px;
+  height: 80px;
+  background: #4f6aa4;
+  border: 3px solid #78bdb3;
+  border-radius: 10px;
+  border-radius: 10px;
 }
 .three {
-  background: #000000;
-  border-radius: 20px;
-  padding-top: 20px;
+  width: 360px;
+  height: 80px;
+  background: #4f6aa4;
+  border: 3px solid #78bdb3;
+  border-radius: 30px;
+  border-radius: 10px;
 }
+
+ .whitespace {
+    height: 10vh;
+  }
