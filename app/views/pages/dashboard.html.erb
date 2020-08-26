@@ -5,105 +5,112 @@
       <img src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598350711/main_5_o2oezm.png" alt="" class="mains-sizing">
       <div class="whitespace"></div>
       <h2>
-        Aujourd’hui, Vendredi 21 Août, voici
-        à quoi ressemble ton <strong>inner powær</strong>
+      Aujourd’hui, Vendredi 21 Août, voici
+      à quoi ressemble ton <strong>inner powær</strong>
       </h2>
-
       <div class="app">
-      <div class="full hide-scroll">
-        <ul class="heros-together d-flex flex-row">
-          <li class="item">  <img
-            src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_2_kbzcgt.png"
-            alt=""
-            class="image-hero"
-          /></li>
-          <li class="item">  <img
-            src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_kx7jdd.png"
-            alt=""
-            class="image-hero"
-          /></li>
-          <li class="item">  <img
-            src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_1_cwfa6w.png"
-            alt=""
-            class="image-hero"
-          /></li>
-          <li class="item">  <img
-            src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_3_rquefj.png"
-            alt=""
-            class="image-hero"
-          /></li>
-          <li class="item">  <img
-            src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_4_fozb4t.png"
-            alt=""
-            class="image-hero"
-          /></li>
-          
-        </ul>
+        <div class="full hide-scroll">
+          <ul class="heros-together d-flex flex-row">
+            <li class="item">  <img
+              src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_2_kbzcgt.png"
+              alt=""
+              class="image-hero"
+            /></li>
+            <li class="item">  <img
+              src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_kx7jdd.png"
+              alt=""
+              class="image-hero"
+            /></li>
+            <li class="item">  <img
+              src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_1_cwfa6w.png"
+              alt=""
+              class="image-hero"
+            /></li>
+            <li class="item">  <img
+              src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_3_rquefj.png"
+              alt=""
+              class="image-hero"
+            /></li>
+            <li class="item">  <img
+              src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_4_fozb4t.png"
+              alt=""
+              class="image-hero"
+            /></li>
+          </ul>
+        </div>
       </div>
-    </div>
-        <div class="title">
-          <h3>QUEL EST TON MOOD AUJOURD'HUI ?</h3>
+      <div class="title">
+        <h3>QUEL EST TON MOOD AUJOURD'HUI ?</h3>
+      </div>
+      <div class="mx-auto">
+        <form
+          class="justify-content-center row form-choice"
+          action="/mood_update"
+          method="post"
+          >
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <%User::MOODS.each_with_index do |mood, i| %>
+          <div class="card col-5 mood-checkbox" data-for="mood-<%= i %>">
+            <div class="plus">
+              <p><i class="fa fa-check"></i></p>
+            </div>
+            <input
+            class="input-checkbox"
+            type="checkbox"
+            hidden
+            id="mood-<%= i %>"
+            name="<%= mood %>"
+            />
+            <h4 class="inset-text"> <span class="active">
+              <label
+                class="mood-checkbox"
+                for="<%= mood %>"
+                data-for="mood-<%= i %>"
+                >
+                <%= mood %>
+              </label>
+            </span>
+            </h4>
+          </div>
+          <% end %>
+          <label class="btnspace">
+            <input
+            class="btn-dash"
+            type="submit"
+            value="VALIDE TES MOODS"
+            />
+          </label>
+        </form>
+      </div>
+      <div class="whitespace"></div>
+      <img src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598350427/main_4_sjn3we.png" alt="" class="mains-sizing">
+      <div class="whitespace"></div>
+      <div class="quests">
+        <div id="top-quest">
+          <div class="title">
+            <h3>CHOISIS LA QUÊTE QUI TE CORRESPOND</h3>
+          </div>
         </div>
         <div class="mx-auto">
-          <form
-            class="justify-content-center row form-choice"
-            action="/mood_update"
-            method="post"
-          >
-            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-            <%User::MOODS.each_with_index do |mood, i| %>
-            <div class="card col-5 mood-checkbox" data-for="mood-<%= i %>"> 
+          <div class="justify-content-center d-flex row">
+            <% @quests.each do |quest| %> <%= link_to quest_path(quest) do %>
+            <div class="card-quest col-12 mood-checkbox">
               <div class="plus">
                 <p><i class="fa fa-check"></i></p>
               </div>
-              <input
-                class="input-checkbox"
-                type="checkbox"
-                hidden
-                id="mood-<%= i %>"
-                name="<%= mood %>"
-              />
-              <h4 class="inset-text"> <span class="active">
-                <label
-                  class="mood-checkbox"
-                  for="<%= mood %>"
-                  data-for="mood-<%= i %>"
-                >
-                  <%= mood %>
+              <h4 class="inset-text">
+              <span class="active">
+                <label>
+                  <%= quest.name %>
                 </label>
               </span>
-              </h4>
-            </div>
-            <% end %>
-           <label class="btnspace">
-             <input
-              class="btn-dash"
-              type="submit"
-              value="VALIDE TES MOODS"
-            />
-          </label>
-          </form>
-        </div>
-        <div class="whitespace"></div>
-        <img src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598350427/main_4_sjn3we.png" alt="" class="mains-sizing">
-        <div class="whitespace"></div>
-        <div class="quests">
-          <div id="top-quest">
-            <div class="title">
-              <h3>CHOISIS LA QUÊTE QUI TE CORRESPOND</h3>
-            </div>
-          </div>
-          <div class="mx-auto justify-content-center">
-            <% @quests.each do |quest| %> <%= link_to quest_path(quest) do %>
-            <div class="card mood-checkbox">
-              <h4><%= quest.name %></h4>
-              <h4><%= quest.description %></h4>
+              <p><%= quest.description %></p>
             </div>
             <% end %> <% end %>
           </div>
-          <br />
-          <br />
         </div>
+        <br />
+        <br />
       </div>
     </div>
   </div>

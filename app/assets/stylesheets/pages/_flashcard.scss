@@ -1,3 +1,9 @@
+
+.title-main2 {
+  font-family: asap;
+  font-size: 20px;
+  color: rgb(3, 0, 0);
+
 h1 {
   font-family: "Abril Fatface", cursive;
   color: rgb(252, 252, 252);
@@ -17,6 +23,35 @@ h1 span {
   background-size: 100% 0.35em;
   background-repeat: no-repeat;
 }
+
+.title-button2 {
+    justify-content: space-around;
+    margin: 20px;
+}
+
+
+span h4 {
+    background-image: linear-gradient(120deg, #78bdb3 100%, #78bdb3 100%);
+    background-position: 0 76%;
+    background-size: 100% 0.35em;
+    background-repeat: no-repeat;
+}
+
+.whitespace {
+    height: 5vh;
+}
+
+
+.app {
+    background: #4f6aa4;
+    background-size: 200% 200%;
+    width: 100%;
+    height: auto;
+}
+
+.welcome {
+    border: 25px solid white;
+  }
 
 .flash-flashcards {
   font-family: asap;
