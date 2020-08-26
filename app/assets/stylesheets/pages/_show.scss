@@ -6,17 +6,28 @@
   font-size: 24px;
   font-weight: 300;
   padding-top: 25px;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.genius {
+  color: #78bdb3;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#container {
+  margin: 10vw;
+}
+
 .cat {
   position: relative;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 .title-main {
   font-family: "Abril Fatface", cursive;
@@ -32,7 +43,6 @@
   text-decoration: underline;
   text-decoration-color: #78bdb3;
 }
-
 
 .one {
   width: 360px;
@@ -58,6 +68,6 @@
   border-radius: 10px;
 }
 
- .whitespace {
-    height: 10vh;
-  }
+.whitespace {
+  height: 10vh;
+}

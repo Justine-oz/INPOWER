@@ -5,9 +5,10 @@
       <img src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598350711/main_5_o2oezm.png" alt="" class="mains-sizing">
       <div class="whitespace"></div>
       <h2>
-      Aujourd’hui, Vendredi 21 Août, voici
+      Aujourd’hui, <%= Date.today.strftime('%d/%m/%Y') %>, voici
       à quoi ressemble ton <strong>inner powær</strong>
       </h2>
+    <br>
       <div class="app">
         <div class="full hide-scroll">
           <ul class="heros-together d-flex flex-row">
@@ -92,9 +93,9 @@
           </div>
         </div>
         <div class="mx-auto">
-          <div class="justify-content-center d-flex row">
+          <div class="justify-content-center ">
             <% @quests.each do |quest| %> <%= link_to quest_path(quest) do %>
-            <div class="card-quest col-12 mood-checkbox">
+            <div class="card-quest mood-checkbox">
               <div class="plus">
                 <p><i class="fa fa-check"></i></p>
               </div>
@@ -103,14 +104,12 @@
                 <label>
                   <%= quest.name %>
                 </label>
-              </span>
-              <p><%= quest.description %></p>
             </div>
-            <% end %> <% end %>
+            <% end %> 
+            <% end %>
           </div>
         </div>
-        <br />
-        <br />
+        <div class="whitespace"></div>
       </div>
     </div>
   </div>

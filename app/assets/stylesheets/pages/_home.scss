@@ -2,39 +2,44 @@
 .homepage {
   background: #4f6aa4;
   h1 {
-    font-family: Asap;
+    font-family: "Abril Fatface", cursive;
     font-style: normal;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 48px;
     line-height: 94px;
     text-align: center;
-    padding-block: 10px;
     color: #ffffff;
   }
 
   .home-text {
     font-family: Asap;
-    font-size: 17px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 35px;
     text-align: justify;
-    margin: 30px;
-
-    color: #ffffff;
+    margin: 50px;
+    letter-spacing: 2px;
+    color: #bce6df;
+    text-shadow: 1px 1px #000000;
   }
 
   .btn-flat {
     background-color: #78bdb3;
-    color: white;
-    padding: 10px 12px;
+    padding: 20px 22px;
     border-radius: 4px;
-    font-family: Didact Gothic;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 30px;
-    width: 17px;
+    font-family: asap;
+    color: #fffefe;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 40px;
     text-align: center;
     box-shadow: 2px 2px 6px #78bdb3;
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  .a {
+    font-family: asap;
+    color: #fffefe;
+    font-size: 16px;
   }
 
   .p-rel {
@@ -43,17 +48,11 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 120vh;
+    height: 140vh;
   }
 
   .p-abs {
     position: absolute;
-  }
-
-  .stroke-bvn {
-    top: 20px;
-    width: 150px;
-    height: 220px;
   }
 
   .mt-5 {
@@ -62,8 +61,8 @@
 
   .home-img {
     background-image: url("https://res.cloudinary.com/dqymzh7jc/image/upload/v1598096637/nos_mains7_yhyw9a.png");
-    width: 160px;
-    height: 110px;
+    width: 300px;
+    height: 210px;
     background-size: cover;
   }
 }
