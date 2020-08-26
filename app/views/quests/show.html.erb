@@ -1,37 +1,41 @@
-<div class="container">
+<div class="userquest-show">
   <div class="params-show">
-    <h4 class="title-main"><%= @quest.name%></h4>
+  <span><h1 class="title-main"><%= @quest.name%></h1></span>
     <br />
   </div>
 
-  <div
-  class="ldBar label-center"
-  aria-valuenow="<%= @total_progress %>"
-  aria-valuemin="0"
-  aria-valuemax="100"
-  data-total="<%= @progress %>"
-  data-counter="<%= @done_total_count %>"
-  data-type="fill"
-  data-value="<%= @progress %>"
-  data-path="M90.5,23.2c0-12.5-10.2-22.7-22.7-22.7
-  c-13.6,0-20.9,8.6-22.3,13.8C44.3,8.9,
-  35.1,0.5,23.2,0.5C10.7,0.5,0.5,10.7,
-  0.5,23.2c0,22.2,36.5,45.3,45,55.9
-  C53.5,67.3,90.5,46.3,90.5,23.2z"
-></div>
+  <div id="container">
+  <div class="heart"
+    aria-valuenow="<%= @total_progress %>"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    data-total="<%= @progress %>"
+    data-counter="<%= @done_total_count %>" >
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 100 100">
+                  <path fill-opacity="0" stroke-width="1" stroke="#bbb" d="M81.495,13.923c-11.368-5.261-26.234-0.311-31.489,11.032C44.74,13.612,29.879,8.657,18.511,13.923  C6.402,19.539,0.613,33.883,10.175,50.804c6.792,12.04,18.826,21.111,39.831,37.379c20.993-16.268,33.033-25.344,39.819-37.379  C99.387,33.883,93.598,19.539,81.495,13.923z"/>
+                  <path id="heart-path" fill-opacity="0" stroke-width="3" stroke="#ED6A5A" d="M81.495,13.923c-11.368-5.261-26.234-0.311-31.489,11.032C44.74,13.612,29.879,8.657,18.511,13.923  C6.402,19.539,0.613,33.883,10.175,50.804c6.792,12.04,18.826,21.111,39.831,37.379c20.993-16.268,33.033-25.344,39.819-37.379  C99.387,33.883,93.598,19.539,81.495,13.923z"/>
+              </svg>
+</div>
+</div>
+
+ 
+<br />
+<br />
+<br />
+<br />
 
   <div class="c-wrapper">
     <div class="text-center">
       <%= link_to quest_flashcards_path(@quest) do %>
       <div class="item one">
-        <img src="img/icons/icon1.png" alt="" />
         <h4 class="categories">Flashcards</h4>
       </div>
       <br />
       <br />
-      <img
-        src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598011224/Group_3_vn8lok.png"
+      <img class="categories-img"
+        src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598437886/cartes_optimized_ngvgub.png"
         alt=""
+        style="height: 200px;"
       />
       <br />
       <br />
@@ -41,13 +45,13 @@
     <div class="center-item text-center">
       <%= link_to quest_videos_path(@quest) do %>
       <div class="item two">
-        <img src="img/icons/icon2.png" alt="" />
         <h4 class="categories">Vidéos</h4>
       </div>
       <br />
       <br />
-      <img
-        src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598011806/Capture_d_e%CC%81cran_2020-08-21_a%CC%80_14.09.54_pntgil.png"
+      <img class="categories-img"
+        src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598438076/video-_1__optimized_karusd.png"
+        style="height: 200px;"
       />
       <br />
       <br />
@@ -60,8 +64,8 @@
       </div>
       <br />
       <br />
-      <img
-        src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598178050/mains_6_oq1rqm.png"
+      <img class="categories-img"
+        src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598437536/mail_1_sl1zvp.png"
         alt=""
         style="height: 200px;"
         ;

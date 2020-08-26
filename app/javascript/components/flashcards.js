@@ -1,16 +1,20 @@
 const flashCards = () => {
-  const tips = document.querySelectorAll(".card-question");
-  tips.forEach((card) => {
-    card.addEventListener("click", (event) => {
-      event.currentTarget.querySelector(".tip-button").classList.add("active");
+  if (document.querySelectorAll(".card-question")) {
+    const tips = document.querySelectorAll(".card-question");
+    tips.forEach((card) => {
+      card.addEventListener("click", (event) => {
+        event.currentTarget
+          .querySelector(".tip-button")
+          .classList.add("active");
+      });
     });
-  });
-  const buttons = document.querySelectorAll("button.flashcard-button");
-  buttons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.currentTarget.parentNode.parentNode.classList.add("moved-left");
+    const buttons = document.querySelectorAll("button.flashcard-button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.currentTarget.parentNode.parentNode.classList.add("moved-left");
+      });
     });
-  });
+  }
 };
 
 //   $.fn.commentCards = function(){

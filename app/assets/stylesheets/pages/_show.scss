@@ -1,3 +1,6 @@
+.userquest-show {
+  border: 25px solid white;
+}
 .categories {
   color: white;
   font-size: 20px;
@@ -5,17 +8,19 @@
   padding-bottom: 15px;
 }
 
-.params-show {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  .title-main {
-    font-family: asap;
-    font-size: 26px;
-    color: black;
-    flex: 8;
-    padding-bottom: 20px;
-  }
+.title-main {
+  font-family: "Abril Fatface", cursive;
+  color: rgb(252, 252, 252);
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 10px;
+  line-height: 150%;
+  padding-bottom: 15vh;
+  padding-top: 15vh;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #78bdb3;
 }
 
 .one {
