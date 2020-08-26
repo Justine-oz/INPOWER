@@ -1,5 +1,5 @@
 const initCheckboxes = () => {
-  if (document.querySelectorAll(".mood-checkbox")) {
+  if (document.querySelectorAll(".mood-checkbox").length >= 1) {
     const checkBoxes = document.querySelectorAll(".mood-checkbox");
     if (checkBoxes.length >= 1) {
       Array.from(checkBoxes).forEach((checkbox) => {

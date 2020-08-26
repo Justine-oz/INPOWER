@@ -24,21 +24,23 @@ require("channels");
 import "bootstrap";
 
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+// import { initSelect2 } from "../components/init_select2";
 import { initCheckboxes } from "../components/init_checkboxes";
 import { flashCards } from "../components/flashcards";
 import { flashcardsExecution } from "../components/flashcards_execution";
 import { videosExecution } from "../components/videos_execution";
 import { loadingBar } from "../components/loading_bar";
-// import { totalExecution } from "../components/total_execution";
+import { totalExecution } from "../components/total_execution";
 
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
-  initCheckboxes();
+  // initCheckboxes();
   flashCards();
   flashcardsExecution();
   videosExecution();
-  loadingBar();
-  // totalExecution();
+  if (document.querySelector(".ldBar.label-center")) {
+    loadingBar();
+  }
+  totalExecution();
 });
