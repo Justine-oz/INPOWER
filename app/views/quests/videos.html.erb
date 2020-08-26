@@ -17,9 +17,9 @@
     </div>
 
     <div id="accordion">
-      <% @videos.first(4).each_with_index do |video, index| %> 
-      <% id="video-#{video.id}" %> 
-      <% clicked = VideosExecution.find_by(user_quest: @userquest, video: video).present? %> 
+      <% @videos.first(4).each_with_index do |video, index| %> <%
+      id="video-#{video.id}" %> <% clicked = VideosExecution.find_by(user_quest:
+      @userquest, video: video).present? %>
       <div class="item-videos" id="headingOne">
         <div
           class="btn btn-link"

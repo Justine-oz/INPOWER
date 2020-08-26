@@ -1,10 +1,10 @@
+
 <div class="flash-flashcards">
-  <h2 class="title-main"><%= @quest.name%></h2>
+  <h1 class="title-main"> <span> <%= @quest.name%>  </span></h1>
   <div class="progress">
     <div class="progress-bar bg-success" id="flashcard-progress" role="progressbar" style="width: <%= @progress %>%" aria-valuenow="<%= @progress %>" aria-valuemin="0" aria-valuemax="100" data-total="<%= @total_flashcards %>" data-counter="<%= @done_flashcards_count %>"></div>
   </div>
   <div class="container-flashcards">
-    <%= link_to "Retour", root_path, class: "btn btn-dark float-right" %>
     <% @flashcards.each do |flashcard| %>
       <ul class="cards">
         <li class="card-question">
