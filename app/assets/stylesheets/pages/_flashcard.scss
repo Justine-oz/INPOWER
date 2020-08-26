@@ -1,7 +1,27 @@
+
 .title-main2 {
   font-family: asap;
   font-size: 20px;
   color: rgb(3, 0, 0);
+
+h1 {
+  font-family: "Abril Fatface", cursive;
+  color: rgb(252, 252, 252);
+  font-weight: 400;
+  font-size: 35px;
+  letter-spacing: 10px;
+  line-height: 150%;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+  position: relative;
+  text-align: center;
+}
+
+h1 span {
+  background-image: linear-gradient(120deg, #78bdb3 100%, #78bdb3 100%);
+  background-position: 0 76%;
+  background-size: 100% 0.35em;
+  background-repeat: no-repeat;
 }
 
 .title-button2 {
@@ -37,7 +57,8 @@ span h4 {
   font-family: asap;
   p {
     font-family: asap;
-    font-size: 15px;
+    font-size: 18spx;
+    padding-bottom: 10px;
   }
   .cards {
     position: relative;
@@ -63,16 +84,18 @@ span h4 {
   .card-question {
     margin: 40px;
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     max-width: 75vw;
     min-width: 75vw;
+    min-height: 115vw;
+    max-height: 115vw;
     z-index: 2;
     transition: all 1s ease-in-out;
-    background: #ccc;
+    background: rgb(248, 249, 238);
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 0 30px #000;
+    box-shadow: 0 0 10px #000;
     cursor: pointer;
     user-select: none;
 
@@ -80,18 +103,6 @@ span h4 {
       margin-bottom: 0;
     }
   }
-
-  // .card--next {
-  //   z-index: 5;
-  //   transform: translateY(-25px) rotate(4deg) translateX(25px) scale(1);
-  // }
-
-  // .card--out {
-  //   animation: card-out 0.6s cubic-bezier(.8,.2,.1,0.8);
-  //   transform: translateY(-50px) rotate(8deg) translateX(55px) scale(0.95);
-  //   z-index: 1;
-  //   background: #bbb;
-  // }
 
   @keyframes card-out {
     0% {
@@ -121,11 +132,17 @@ span h4 {
 }
 ////////////////////////////////////////
 
-
-html,
-body {
-  height: 100%;
+h2 {
+  margin: 0;
+  font-family: "Abril Fatface", cursive;
+  font-size: 25px;
+  text-justify: justify;
+  padding-bottom: 60px;
 }
 body {
   font-family: asap;
+  background: #4f6aa4;
+  background-size: 200%;
+  height: auto;
+  width: 100%;
 }
