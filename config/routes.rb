@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  get 'home', to: 'pages#home', as: :home
+
+  devise_scope :user do
+    authenticated :user do
+      root 'pages#dashboard', as: :authenticated_root
+    end
+    unauthenticated do
+      root 'pages#home', as: :unauthenticated_root
+    end
+  end
+
   get "dashboard", to: "pages#dashboard"
   post "mood_update", to: "pages#mood_update"
 
