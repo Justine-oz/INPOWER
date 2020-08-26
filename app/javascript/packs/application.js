@@ -35,7 +35,7 @@ import { loadingBar } from "../components/loading_bar";
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
-  // initCheckboxes();
+  initCheckboxes();
   flashCards();
   flashcardsExecution();
   videosExecution();
