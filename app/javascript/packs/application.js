@@ -31,6 +31,7 @@ import { flashcardsExecution } from "../components/flashcards_execution";
 import { videosExecution } from "../components/videos_execution";
 import { totalExecution } from "../components/total_execution";
 import { initHeartProgress } from "../components/progress_bar";
+import { initChatroomCable } from "../channels/chatroom_channel";
 
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
@@ -41,4 +42,5 @@ document.addEventListener("turbolinks:load", () => {
   videosExecution();
   totalExecution();
   initHeartProgress();
+  initChatroomCable();
 });
