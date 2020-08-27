@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get "userquests/:user_quest_id/flashcards/:flashcard_id/flashcards_executions", to: "flashcards_executions#create", as: :flashcards_progress
   get "userquests/:user_quest_id/videos/:video_id/videos_executions", to: "videos_executions#create", as: :videos_progress
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :chatrooms, only: :show do
+  resources :chatrooms, only: [:show, :admin] do
     resources :messages, only: :create
   end
 end
