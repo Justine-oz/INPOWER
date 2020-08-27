@@ -5,7 +5,6 @@ class ChatroomsController < ApplicationController
   end
 
   def index
-    @message = Message.new
     if current_user.admin == true
       @chatrooms = Chatroom.all
     else
