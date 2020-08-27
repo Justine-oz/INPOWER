@@ -12,32 +12,19 @@
       <div class="app">
         <div class="full hide-scroll">
           <ul class="heros-together d-flex flex-row">
-            <li class="item">  <img
-              src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_2_kbzcgt.png"
-              alt=""
-              class="image-hero"
-            /></li>
-            <li class="item">  <img
-              src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_kx7jdd.png"
-              alt=""
-              class="image-hero"
-            /></li>
-            <li class="item">  <img
-              src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_1_cwfa6w.png"
-              alt=""
-              class="image-hero"
-            /></li>
-            <li class="item">  <img
-              src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_3_rquefj.png"
-              alt=""
-              class="image-hero"
-            /></li>
-            <li class="item">  <img
-              src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_4_fozb4t.png"
-              alt=""
-              class="image-hero"
-            /></li>
+            <% Quest.all.each do |quest| %>
+              <% opacity = UserQuest.find_by(user: current_user, quest: quest) ? (current_user.total_progress(quest) / 100.0) : 0.2 %>
+               <li class="item">
+                <img
+                  src="<%= quest.image_url %>"
+                  alt="<%= quest.name %> image"
+                  class="image-hero"
+                  style="opacity: <%= opacity %>;"
+                />
+              </li>
+            <% end %>
           </ul>
+          </div>
           <div class="justify-content-center ">
             <% current_user.quests.each do |quest| %>
               <% unless current_user.total_progress(quest) == 0 %>
@@ -60,7 +47,6 @@
               <% end %>
             <% end %>
           </div>
-        </div>
       </div>
       <div class="title">
         <h3>QUEL EST TON MOOD AUJOURD'HUI ?</h3>
