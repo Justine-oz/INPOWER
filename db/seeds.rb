@@ -12,7 +12,7 @@ User.destroy_all
 
 user1 = User.create(email: 'test@test.fr', password: '123456', nickname: "Lu", moods: ["Incompris.e"])
 
-admin = User.create(email: 'admin@admin.fr', password: 'admin1234', admin: true)
+admin = User.create(email: 'admin@admin.fr', password: 'admin1234', nickname: "Admin", admin: true)
 
 user2 = User.create(email: 'child@child.fr', password: 'child12', nickname: "CHILD")
 

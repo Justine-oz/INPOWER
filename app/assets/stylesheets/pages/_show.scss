@@ -1,6 +1,13 @@
 .userquest-show {
   border: 25px solid white;
 }
+
+.no-underline {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .categories {
   color: white;
   font-size: 24px;
