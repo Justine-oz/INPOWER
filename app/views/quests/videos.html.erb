@@ -26,7 +26,7 @@
         <% clicked = VideosExecution.find_by(user_quest: @userquest, video: video).present? %>
         <div class="item-videos" id="headingOne">
           <div
-            class="btn btn-link"
+            class="my-btn btn-link"
             data-toggle="collapse"
             data-clicked="<%= clicked %>"
             data-target="#<%= id %>"
