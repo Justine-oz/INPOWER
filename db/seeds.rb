@@ -10,26 +10,25 @@ Video.destroy_all
 Quest.destroy_all
 User.destroy_all
 
-user1 = User.create(email: 'test@test.fr', password: '123456', nickname: "Lu", moods: ["Incompris.e"])
 
 admin = User.create(email: 'admin@admin.fr', password: 'admin1234', nickname: "Admin", admin: true)
+lucie = User.create(email: 'lucie@lucie.fr', password: '123456', nickname: "Lulu")
 
-user2 = User.create(email: 'child@child.fr', password: 'child12', nickname: "CHILD")
 
 
 quests = [
-  {name: "Savoir dire non", description: "...", moods:["Jaloux.se", "Incompris.e", "Amoureux.se", "Fort.e", "Trahi.e", "Je ne sais pas"], flashcards_nums: [9, 4, 18, 77, 75, 74, 72, 71, 68, 65, 62, 60, 26, 27, 28, 30, 31, 34, 35, 38, 41, 42, 43, 45, 46, 47, 48, 49, 50, 8], videos_nums: [1, 7, 5, 8], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598363174/output-onlinepngtools_1_eiydwa.png"},
-  {name: "Garder mon calme", description: "...", moods:["Stressé.e", "En colère", "Amoureux.se", "Honteux.se"], flashcards_nums: [2, 3], videos_nums: [1, 5, 3, 4], flashcards_nums: [9, 4, 18], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598363170/output-onlinepngtools_r9sp3m.png"},
-  {name: "Avoir confiance en moi", description: "...", moods:["Jaloux.se", "Stressé.e", "Seul.e", "Amoureux.se", "Honteux.se"], flashcards_nums: [3, 4], videos_nums: [1, 7, 5, 8], flashcards_nums: [9, 4, 18], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348684/output-onlinepngtools_5_x34aiv.png"},
-  {name: "Pouvoir dire 'je t'aime'", description: "...", moods:["Optimiste", "Amoureux.se", "Fort.e", "Honteux.se"], flashcards_nums: [3, 4], videos_nums: [1, 7, 5, 8], flashcards_nums: [9, 4, 18], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_3_rquefj.png"},
-  {name: "Aller vers les autres", description: "...", moods:["Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Honteux.se"], videos_nums: [1, 7, 5, 8], flashcards_nums: [9, 4, 17, 16, 8], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_2_kbzcgt.png"},
-  # {name: "Pouvoir faire confiance", description: "...", moods:["Jaloux.se", "En colère", "Seul.e", "Amoureux.se", "Fort.e"]},
+  {name: "Savoir dire non", description: "...", moods:["Jaloux.se", "Incompris.e", "Optimiste", "Amoureux.se", "Fort.e", "Trahi.e", "Je ne sais pas"], flashcards_nums: [9, 4, 18, 77, 75, 74, 72, 71, 68, 65, 62, 60, 26, 27, 28, 30, 31, 34, 35, 38, 41, 42, 43, 45, 46, 47, 48, 49, 50, 8], videos_nums: [1, 7, 5, 8], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598363174/output-onlinepngtools_1_eiydwa.png"},
+  {name: "Pouvoir dire 'je t'aime'", description: "...", moods:["Amoureux.se", "Fort.e", "Honteux.se"], flashcards_nums: [3, 4, 7, 22, 37, 78, 57, 50], videos_nums: [9, 10, 11, 6], flashcards_nums: [9, 4, 18], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598538716/output-onlinepngtools_6_zrnloq.png"},
+  # {name: "Garder mon calme", description: "...", moods:["Stressé.e", "En colère", "Amoureux.se", "Honteux.se"], flashcards_nums: [2, 3], videos_nums: [1, 5, 3, 4], flashcards_nums: [9, 4, 18], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598363170/output-onlinepngtools_r9sp3m.png"},
+  {name: "Avoir confiance en moi", description: "...", moods:["Stressé.e"], videos_nums: [1, 7, 5, 8], flashcards_nums: [9, 4, 18], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_3_rquefj.png"},
+  {name: "Aller vers les autres", description: "...", moods:["En colère"], videos_nums: [1, 7, 5, 8], flashcards_nums: [9, 4, 17, 16, 8], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_2_kbzcgt.png"},
+  {name: "Pouvoir faire confiance", description: "...", moods:["En colère"],  videos_nums: [1, 7, 5, 8], flashcards_nums: [9, 4, 17, 16, 8], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348684/output-onlinepngtools_5_x34aiv.png"},
   # {name: "Me faire respecter", description: "...", moods:["Incompris.e", "Seul.e", "Amoureux.se", "Honteux.se", "Trahi.e"]},
   # {name: "Prendre de la distance", description: "...", moods:["Stressé.e", "Jaloux.se", "En colère", "Optimiste", "Amoureux.se", "Fort.e", "Honteux.se", "Trahi.e", "Sûr.e de moi"]},
   # {name: "Lâcher prise", description: "...", moods:["Stressé.e", "Incompris.e", "En colère", "Amoureux.se", "Fort.e", "Honteux.se", "Trahi.e", "Je ne sais pas"]},
-  {name: "Partager mes émotions", description: "...", moods:["Jaloux.se", "Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Honteux.se", "Trahi.e", "Sûr.e de moi", "Je ne sais pas"], flashcards_nums: [1, 2, 3, 5, 6, 7, 78, 76, 73, 70, 69, 66, 64, 59, 56, 58, 54, 55, 17, 20, 21, 25, 29, 32, 33, 36, 37, 39, 40, 44], videos_nums: [6, 3, 4, 2], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_4_fozb4t.png"},
+  # {name: "Partager mes émotions", description: "...", moods:["Jaloux.se", "Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Honteux.se", "Trahi.e", "Sûr.e de moi", "Je ne sais pas"], flashcards_nums: [1, 2, 3, 5, 6, 7, 78, 76, 73, 70, 69, 66, 64, 59, 56, 58, 54, 55, 17, 20, 21, 25, 29, 32, 33, 36, 37, 39, 40, 44], videos_nums: [6, 3, 4, 2], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_4_fozb4t.png"},
   # {name: "Être fier.e de moi", description: "...", moods:["Stressé.e", "Incompris.e", "Seul.e", "Amoureux.se", "Fort.e"]},
-  # {name: "Communiquer ma bonne humeur", description: "...", moods:["Optimiste", "Amoureux.se", "Sûr.e de moi", "Fort.e"]},
+  {name: "Communiquer ma bonne humeur", description: "...", moods:[ "Incompris.e","Optimiste", "Amoureux.se", "Sûr.e de moi", "Fort.e"], videos_nums: [1, 7, 5, 8], flashcards_nums: [9, 4, 17, 16, 8], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598363170/output-onlinepngtools_r9sp3m.png"},
   # {name: "Gérer les conflits", description: "...", moods:["Jaloux.se", "Incompris.e", "En colère", "Amoureux.se", "Honteux.se", "Trahi.e", "Sûr.e de moi"]}
 ]
 
@@ -39,7 +38,7 @@ flashcards = [
   {num: 1, question: "Si tu avais l’option d’ajouter une chanson dans la description de ton profil Insta, laquelle ce serait ?", tip: "Ajoute la phrase la plus percutante de la chanson dans ta description."},
   {num: 2, question: "Penses-tu que tu peux être indtimidant.e pour les autres ? Pourquoi ?", tip: "Parfois, la frontière entre l’intimidation et l’inspiration peut-être mince. Tente de déterminer le trait de ta personnalité qui pourrait inspirer les autres."},
   {num: 3, question: "Qu’est-ce que tes chaussures disent de toi?", tip: "Essaie d’associer un adjectif à tes chaussures : originales, colorées, random, de marque, pratiques, élégantes, fun, etc"},
-  {num: 4, question: "Qu’est ce qui te fait baisser les yeux quand ton regard croise celui de quelqu’un d’autre ?", tip: "Identifie ce qui t’intimide : la peur du jugement, le désir de connaître l’autre, autre chose."},
+  {num: 4, question: "Qu’est ce qui te fait baisser les yeux quand ton regard croise celui de quelqu’un d’autre ?", tip: "Identifie ce qui t’intimide."},
   {num: 5, question: "Quelle série pourrais-tu regarder sans t’arrêter ?", tip: "Identifie ce qui t’apporte du réconfort. Essaie de reproduire le sentiment de ce réconfort à d’autres moment de ta vie."},
   {num: 6, question: "Qu’est-ce que tu fais chaque jour et qui te semble vraiment difficile ?", tip: "Prends une grande respiration et remercie-toi pour ta persistance."},
   {num: 7, question: "À qui penses-tu ?", tip: "Fais une liste de tout ce que tu aimerais lui dire. Évalue ce que tu pourrais lui dire maintenant, bientôt, jamais."},
@@ -72,7 +71,7 @@ flashcards = [
   {num: 34, question: "Réponds à une question que tu n’oserais pas poser à quelqu’un.e en public ?", tip: "Identifie pourquoi elle pourrait être dérangeante."},
   {num: 35, question: "Quelle est la plus grande peine non physique que tu aies vécue ?", tip: "Va vers ce qui t’apporte du réconfort et identifie en quoi tu en es sorti grandi.e."},
   {num: 36, question: "Si tu avais la possibilité de vraiment connaître quelqu’un.e, qui ce serait ? Pourquoi ?", tip: "Si cette personne t’est accessible, tu peux lui partager ton envie de mieux la connaître. Autrement, détermine les traits de caractères qui t’attirent chez elle."},
-  {num: 37, question: "Quel est le nom de ta mère ? Qu’elle est la chose la plus belle que tu penses à propos d’elle ?", tip: "Écris à ta mère pourquoi tu lui aies reconnaissant.e. Tu peux lui donner le mot, ou pas."},
+  {num: 37, question: "Quelle est la chose la plus belle que tu penses à propos de ta mère ?", tip: "Écris les raisons qui te rendent reconnaissant.e."},
   {num: 38, question: "Qu’est-ce que tu essaies toujours de te prouver à toi-même ?", tip: "Penses-tu que ça en vaut la peine ?"},
   {num: 39, question: "Comment peux-tu devenir une meilleure version de toi-même ?", tip: "Et si tu étais déjà la meilleure version de toi-même..."},
   {num: 40, question: "Qu’est-ce que toi plus jeune ne pourrait pas croire à propos de ta vie actuelle ?", tip: "Si ça te fait rire, ris. Pose la même question à un.e ami.e."},
@@ -85,7 +84,7 @@ flashcards = [
   {num: 47, question: "Y a-t-il un sentiment qui te manque ?", tip: "Identifie ce qui pourrait combler ce manque. Est-ce accessible ? Comment ?"},
   {num: 48, question: "Quelle est la chose que tu ne voudrais pas changer chez toi ?", tip: "Prends une grande respiration et ressens pleinement cette fierté."},
   {num: 49, question: "Appuie sur “lecture aléatoire” dans ta bibliothèque de musiques et écoute la première chanson qui se lance.", tip: "Quels sentiments et souvenirs t’évoque-t-elle ?"},
-  {num: 50, question: "Est-ce qu’un.e inconnu.e a déjà changé ta vie ?", tip: "Toi aussi, tu peux être cet.te inconnu.e. Savais-tu que sourire à un.e inconnu.e peut augmenter l'espérance de vie ?"},
+  {num: 50, question: "Est-ce qu’un.e inconnu.e a déjà changé ta vie ?", tip: "Toi aussi, tu peux être cet.te inconnu.e."},
   {num: 51, question: "A quelle question essaies-tu le plus de répondre en ce moment ?", tip: "Mets cette question de côté. Tu y répondras quand tu t’y attendras le moins."},
   {num: 52, question: "Quel est ton souvenir le plus joyeux de l’année écoulée ?", tip: "N’hésite pas à prendre du temps pour te remémorer et t’imprégner de ce souvenir."},
   {num: 53, question: "Regarde la dernière photo présente sur ta pellicule.", tip: "D’après toi, que raconte-t-elle ?"},
@@ -113,7 +112,7 @@ flashcards = [
   {num: 75, question: "Si c'est le cas, à quel moment as-tu réalisé que tu n’étais pas invincible ?", tip: "Personne n’est invincible. La vulnérabilité est la nouvelle authenticité."},
   {num: 76, question: "Est-ce que tu penses que l’image que tu as de toi correspond à l’image que les autres ont de toi ?", tip: "Quelle facette de toi aimerais-tu montrer plus aux autres ?"},
   {num: 77, question: "Quel est le rêve auquel tu as renoncé ?", tip: "Identifie les raisons pour lesquelles tu y as renoncé. En valent-elles la peine ?"},
-  {num: 78, question: "Appelle quelqu’un que tu admires et dis-lui pourquoi tu l’apprécies.", tip: "Tu as fait ta BA de la journée !"},
+  {num: 78, question: "Appelle quelqu’un que tu admires et dis-lui pourquoi tu l’apprécies.", tip: "Un compliment est déjà un geste d'amour."},
   ]
 
 
@@ -126,8 +125,12 @@ videos = [
   {num: 5, name: "La peur", description: "Et si on arrêtait d'avoir peur ? | Margaux Hammann | TEDxReims", url: "https://www.youtube.com/embed/xKSSEHbRXcM"},
   {num: 6, name: "La confiance", description: "Manque de confiance : comprendre le cerveau pour l’affronter | Lisa Lai | TEDxINSA", url: "https://www.youtube.com/embed/LYjzHayRaes"},
   {num: 7, name: "Homme/Femme", description: "Repenser nos rapports femmes-hommes | Emma (pseudo) | TEDxLille", url: "https://www.youtube.com/embed/pxfgiSvcH0o"},
-  {num: 8, name: "La Liberté sexuelle", description: "La liberté sexuelle en question: Catherine Blanc at TEDxParis 2013", url: "https://www.youtube.com/embed/13razgR8q7g"}
+  {num: 8, name: "La Liberté sexuelle", description: "La liberté sexuelle en question: Catherine Blanc at TEDxParis 2013", url: "https://www.youtube.com/embed/13razgR8q7g"},
+  {num: 9, name: "Être moins timide avec son crush", description: "Être moins timide avec son crush", url:"https://www.youtube.com/embed/vjBWtkNu8oY"},
+  {num: 10, name: "Dire 'je t'aime'", description: "Être moins timide avec son crush", url:"https://www.youtube.com/embed/pIls4gwSWOY"},
+  {num: 11, name: "Sortir de l'hétérosexualité'", description: "Être moins timide avec son crush", url:"https://www.youtube.com/embed/nKvCBoImZr8"}
 ]
+
 
 
 puts "Creating quests"
