@@ -1,38 +1,107 @@
-/* Chat containers */
-.container {
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 12px;
-  margin: 12px;
-  height: auto;
+.chatroom {
+  .container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 12px;
+    height: auto;
+  }
+
+  .form-control {
+    background-color: rgb(239, 240, 211);
+  }
+
+  .btn-dash {
+    input {
+      background-color: #78bdb3;
+      font-family: asap;
+      font-size: 22px;
+      color: white;
+      border-color: #4f6aa4;
+      font-weight: bold;
+      border: 3px solid #78bdb3;
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-top: 50px;
+    }
+  }
+
+  .text-message {
+    margin: 72px;
+  }
+
+  .input {
+    color: white;
+  }
+
+  .darker {
+    border-color: #ccc;
+    background-color: #ddd;
+  }
+
+
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+  .container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+
+
+  .container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
+  #messages {
+    display: flex;
+    flex-direction: column;
+    color: #78bdb3;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Asap", sans-serif;
 }
 
-/* Darker chat container */
-.darker {
-  border-color: #ccc;
-  background-color: #ddd;
-}
-
-/* Clear floats */
-.container::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Style images */
-.container img {
-  float: left;
-  max-width: 60px;
-  width: 100%;
+.msg {
+  margin-bottom: 50px;
+  border: 3px solid black;
+  border-radius: 30px;
+  background-color: rgb(239, 240, 211);
+  margin-left: 60px;
   margin-right: 20px;
-  border-radius: 50%;
+  padding: 10px;
 }
 
-/* Style the right image */
-.container img.right {
-  float: right;
+.msg-admin {
+  span {
+  color: rgb(239, 240, 211);
+  font-weight: bold;
+}
+  margin-bottom: 50px;
+  border: 3px solid black;
+  border-radius: 30px;
+  background-color: #78bdb3;
   margin-left: 20px;
-  margin-right: 0;
+  margin-right: 60px;
+  padding: 10px;
+  color: rgb(239, 240, 211);
+}
+
+  h4 {
+    font-family: "Abril Fatface", cursive;
+    color: #fcfcfc;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin: 25px;
+  }
 }
