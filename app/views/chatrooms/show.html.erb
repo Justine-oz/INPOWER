@@ -1,20 +1,16 @@
 <div class="chatroom">
-<div class="theme-title">
   <h1># <%= @chatroom.theme %></h1>
-  </div>
 
-  <div class="msgs">
+  <div>
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
       <% @chatroom.messages.each do |message| %>
         <%= render "messages/message", message: message %>
       <% end %>
-  </div>
+    </div>
 
-<div class="sending">
     <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
       <%= f.input :content, label: false, placeholder: "Ecris ton message sur le thème de la quête ##{@chatroom.theme}" %>
       <%= f.submit %>
     <% end %>
-  </div>
   </div>
 </div>

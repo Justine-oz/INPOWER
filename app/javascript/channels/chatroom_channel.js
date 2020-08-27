@@ -1,4 +1,5 @@
 import consumer from "./consumer";
+
 const initChatroomCable = () => {
   const messagesContainer = document.getElementById("messages");
   if (messagesContainer) {
@@ -13,4 +14,5 @@ const initChatroomCable = () => {
     );
   }
 };
+
 export { initChatroomCable };
