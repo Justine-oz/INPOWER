@@ -7,6 +7,17 @@
   margin: 20px;
 }
 
+.my-btn {
+  font-family: asap;
+  justify-content: space-around;
+  padding-top: 10px;
+  margin: 20px;
+  color: white;
+}
+
+.btn-link:hover {
+  color: #78bdb3;
+}
 .title-main1 {
   font-family: "Abril Fatface", cursive;
   color: rgb(252, 252, 252);
@@ -44,4 +55,11 @@ span h4 {
 
 .bg-success {
   background-color: #e60058 !important;
+}
+
+.card-title {
+  font-family: asap;
+  font-size: 26px;
+  text-decoration: underline;
+  text-decoration-color: #78bdb3;
 }

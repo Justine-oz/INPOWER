@@ -37,7 +37,9 @@
   </div>
 
   <div class="genius">
-    <% if @progress == 100 %>
+  <% if @progress == 0 %>
+    <p>Tu vas commencer une nouvelle quête.</p>
+    <% elsif @progress == 100 %>
     <p>Vous avez fini la quête</p>
     <% elsif @progress < 100 %>
     <p>
