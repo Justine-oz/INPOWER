@@ -10,7 +10,6 @@ Video.destroy_all
 Quest.destroy_all
 User.destroy_all
 
-
 admin = User.create(email: 'admin@admin.fr', password: 'admin1234', nickname: "Admin", admin: true)
 lucie = User.create(email: 'lucie@lucie.fr', password: '123456', nickname: "Lulu")
 
