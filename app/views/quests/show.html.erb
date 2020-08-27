@@ -58,7 +58,7 @@
 
   <div class="c-wrapper">
     <div class="text-center">
-      <%= link_to quest_flashcards_path(@quest) do %>
+      <%= link_to quest_flashcards_path(@quest), class: "no-underline" do %>
       <div class="cat one">
         <h4 class="categories">Flashcards</h4>
         <div class="whitespace"></div>
@@ -75,7 +75,7 @@
       <% end %>
     </div>
     <div class="center-item text-center">
-      <%= link_to quest_videos_path(@quest) do %>
+      <%= link_to quest_videos_path(@quest), class: "no-underline" do %>
       <div class="cat two">
         <h4 class="categories">Vidéos</h4>
         <div class="whitespace"></div>
@@ -91,7 +91,7 @@
       <% end %>
     </div>
     <div class="center-item text-center">
-      <%= link_to chatroom_path(@userquest.chatroom) do %>
+      <%= link_to chatroom_path(@userquest.chatroom), class: "no-underline" do %>
       <div class="cat three">
         <h4 class="categories">Parler avec un.e conseillèr.e</h4>
       </div>
