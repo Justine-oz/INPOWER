@@ -1,0 +1,17 @@
+<% @chatrooms.each do |chatroom| %>
+  <% link_to chatroom_path(chatroom)%>
+  <h4><%= chatroom.theme %></h4>
+
+  <% chatroom.messages.each do |message| %>
+    <ul>
+      <li><%= render "messages/message", message: message %></li>
+    </ul>
+
+
+  <%= simple_form_for [ chatroom, @message ], remote: true do |f| %>
+      <%= f.input :content, label: false, placeholder: current_user.admin ? "Réponds à #{chatroom.user.nickname}" : "Ecris ton message sur le thème de la quête ##{chatroom.theme}" %>
+      <%= f.submit %>
+    <% end %>
+  <% end %>
+<% end %>
+

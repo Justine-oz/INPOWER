@@ -4,7 +4,13 @@ class ChatroomsController < ApplicationController
     @message = Message.new
   end
 
-  def admin
-    @chatrooms = Chatroom.all
+  def index
+    @message = Message.new
+    if current_user.admin == true
+      @chatrooms = Chatroom.all
+    else
+      @userquests = UserQuest.where(user: current_user)
+      @chatrooms = Chatroom.where(user_quest: @userquests)
+    end
   end
 end

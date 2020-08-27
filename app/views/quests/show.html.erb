@@ -41,7 +41,9 @@
     <p>Tu vas commencer une nouvelle quête.</p>
     <% elsif @progress == 100 %>
     <p>Vous avez fini la quête</p>
-    <% elsif @progress < 100 %>
+    <% elsif @progress == 0 %>
+    <p>Démarre ta quête !</p>
+    <% else @progress < 100 %>
     <p>
       Tu as déjà accompli <%= @progress %> % <br />
       de ta quête 👌
@@ -93,7 +95,7 @@
       <div class="cat three">
         <h4 class="categories">Parler avec un.e conseillèr.e</h4>
       </div>
-      
+
       <img
         class="categories-img"
         src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598437536/mail_1_sl1zvp.png"
