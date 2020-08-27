@@ -109,11 +109,10 @@
   }
 
   .card {
-    padding: 20px 20px;
+    padding: 40px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid rgba(255, 255, 255, 0.6);
     margin: 1.13%;
@@ -278,6 +277,7 @@
 .inset-text {
   font-family: "Abril Fatface", cursive;
   font-size: 20px;
+
   margin: 0;
   /* Shadows are visible under slightly transparent text color */
   color: #fff;
