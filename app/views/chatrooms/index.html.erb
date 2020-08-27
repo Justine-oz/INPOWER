@@ -1,4 +1,7 @@
+<div class="quests-messages">
+  <h3>Tes différentes chatrooms</h3>
+  <% @chatrooms.each do |chatroom| %>
+    <h4><%= link_to chatroom.theme, chatroom_path(chatroom)%></h4>
+  <% end %>
 
-<% @chatrooms.each do |chatroom| %>
-  <h4><%= link_to chatroom.theme, chatroom_path(chatroom)%></h4>
-<% end %>
+</div>
