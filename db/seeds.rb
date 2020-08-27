@@ -17,7 +17,7 @@ lucie = User.create(email: 'lucie@lucie.fr', password: '123456', nickname: "Lulu
 
 quests = [
   {name: "Savoir dire non", description: "...", moods:["Jaloux.se", "Incompris.e", "Optimiste", "Amoureux.se", "Fort.e", "Trahi.e", "Je ne sais pas"], flashcards_nums: [9, 4, 18, 77, 75, 74, 72, 71, 68, 65, 62, 60, 26, 27, 28, 30, 31, 34, 35, 38, 41, 42, 43, 45, 46, 47, 48, 49, 50, 8], videos_nums: [1, 7, 5, 8], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598363174/output-onlinepngtools_1_eiydwa.png"},
-  {name: "Pouvoir dire 'je t'aime'", description: "...", moods:["Amoureux.se", "Fort.e", "Honteux.se"], flashcards_nums: [3, 4, 7, 22, 37, 78, 57, 50], videos_nums: [9, 10, 11, 6], flashcards_nums: [9, 4, 18], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598538716/output-onlinepngtools_6_zrnloq.png"},
+  {name: "Pouvoir dire 'je t'aime'", description: "...", moods:["Amoureux.se", "Fort.e", "Honteux.se"], flashcards_nums: [3, 4, 7, 22, 37, 78, 57, 50], videos_nums: [9, 10, 11, 6], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598538716/output-onlinepngtools_6_zrnloq.png"},
   # {name: "Garder mon calme", description: "...", moods:["Stressé.e", "En colère", "Amoureux.se", "Honteux.se"], flashcards_nums: [2, 3], videos_nums: [1, 5, 3, 4], flashcards_nums: [9, 4, 18], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598363170/output-onlinepngtools_r9sp3m.png"},
   {name: "Avoir confiance en moi", description: "...", moods:["Stressé.e"], videos_nums: [1, 7, 5, 8], flashcards_nums: [9, 4, 18], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_3_rquefj.png"},
   {name: "Aller vers les autres", description: "...", moods:["En colère"], videos_nums: [1, 7, 5, 8], flashcards_nums: [9, 4, 17, 16, 8], image_url: "https://res.cloudinary.com/dqymzh7jc/image/upload/v1598348656/output-onlinepngtools_2_kbzcgt.png"},
@@ -127,7 +127,7 @@ videos = [
   {num: 8, name: "La Liberté sexuelle", description: "La liberté sexuelle en question: Catherine Blanc at TEDxParis 2013", url: "https://www.youtube.com/embed/13razgR8q7g"},
   {num: 9, name: "Être moins timide avec son crush", description: "Être moins timide avec son crush", url:"https://www.youtube.com/embed/vjBWtkNu8oY"},
   {num: 10, name: "Dire 'je t'aime'", description: "Être moins timide avec son crush", url:"https://www.youtube.com/embed/pIls4gwSWOY"},
-  {num: 11, name: "Sortir de l'hétérosexualité'", description: "Être moins timide avec son crush", url:"https://www.youtube.com/embed/nKvCBoImZr8"}
+  {num: 11, name: "Sortir de l'hétérosexualité", description: "Être moins timide avec son crush", url:"https://www.youtube.com/embed/nKvCBoImZr8"}
 ]
 
 
