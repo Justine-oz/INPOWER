@@ -6,6 +6,6 @@ class Chatroom < ApplicationRecord
     message_index = self.messages.index do |message|
       !message.user.admin
     end
-    self.messages[message_index].user
+    message_index ? self.messages[message_index].user : nil
   end
 end
