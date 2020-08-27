@@ -5,8 +5,8 @@
       <img src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598350711/main_5_o2oezm.png" alt="" class="mains-sizing">
       <div class="whitespace"></div>
       <h2>
-      Aujourd’hui, <%= Date.today.strftime('%d/%m/%Y') %>, voici
-      à quoi ressemble ton <strong>inner powær</strong>
+      Aujourd’hui, <%= Date.today.strftime('%d/%m/%Y') %>,
+      voici à quoi ressemble ton <strong>inner powær</strong>
       </h2>
     <br>
       <div class="app">
@@ -41,15 +41,18 @@
           <div class="justify-content-center ">
             <% current_user.quests.each do |quest| %>
               <% unless current_user.total_progress(quest) == 0 %>
+              <div class="newquests">
               <p>Voici les quêtes que tu as commencées:</p>
+              </div>
                 <div class="card-quest mood-checkbox d-flex">
-                  <h4 class="inset-text mr-3">
+                  <h4 class="text-quest mr-3">
                     <label>
-                      <%= quest.name %> : <%= current_user.total_progress(quest) %> %
+                      <%= quest.name %> 
+                      ✨ <%= current_user.total_progress(quest) %> % 
                     </label>
                   </h4>
                   <%= link_to quest_path(quest), class: "dash btn-dash no-underline" do %>
-                    <h4 class="inset-text">
+                    <h4 class="text-quest">
                       Continuer la quête
                     </h4>
                   <% end %>
