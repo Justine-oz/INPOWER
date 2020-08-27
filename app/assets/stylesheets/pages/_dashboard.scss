@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
+.no-underline {
+  &:hover {
+    text-decoration: none;
+  }
+}
 .dash {
   .viewport {
     background: #4f6aa4;

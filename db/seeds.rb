@@ -14,11 +14,14 @@ user1 = User.create(email: 'test@test.fr', password: '123456', nickname: "Lu", m
 
 admin = User.create(email: 'admin@admin.fr', password: 'admin1234', admin: true)
 
+user2 = User.create(email: 'child@child.fr', password: 'child12', nickname: "CHILD")
+
+
 quests = [
   {name: "Savoir dire non", description: "...", moods:["Jaloux.se", "Incompris.e", "Amoureux.se", "Fort.e", "Trahi.e", "Je ne sais pas"], flashcards_nums: [9, 4, 18, 77, 75, 74, 72, 71, 68, 65, 62, 60, 26, 27, 28, 30, 31, 34, 35, 38, 41, 42, 43, 45, 46, 47, 48, 49, 50, 8], videos_nums: [1, 7, 5, 8]},
   {name: "Garder mon calme", description: "...", moods:["Stressé.e", "En colère", "Amoureux.se", "Honteux.se"], flashcards_nums: [2, 3], videos_nums: [1, 5, 3, 4]},
-  # {name: "Avoir confiance en moi", description: "...", moods:["Jaloux.se", "Stressé.e", "Seul.e", "Amoureux.se", "Honteux.se"], flashcards_nums: [3, 4]}
-  # {name: "Pouvoir dire 'je t'aime'", description: "...", moods:["Optimiste", "Amoureux.se", "Fort.e", "Honteux.se"]},
+  {name: "Avoir confiance en moi", description: "...", moods:["Jaloux.se", "Stressé.e", "Seul.e", "Amoureux.se", "Honteux.se"], flashcards_nums: [3, 4], videos_nums: [1, 7, 5, 8]},
+  {name: "Pouvoir dire 'je t'aime'", description: "...", moods:["Optimiste", "Amoureux.se", "Fort.e", "Honteux.se"], flashcards_nums: [3, 4], videos_nums: [1, 7, 5, 8]},
   # {name: "Aller vers les autres", description: "...", moods:["Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Honteux.se"]},
   # {name: "Pouvoir faire confiance", description: "...", moods:["Jaloux.se", "En colère", "Seul.e", "Amoureux.se", "Fort.e"]},
   # {name: "Me faire respecter", description: "...", moods:["Incompris.e", "Seul.e", "Amoureux.se", "Honteux.se", "Trahi.e"]},

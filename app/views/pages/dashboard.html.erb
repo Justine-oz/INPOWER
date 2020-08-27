@@ -1,7 +1,7 @@
 <div class="dash">
   <div class="viewport">
     <div class="welcome">
-      <h1><span> BIENVENUE LU </span></h1>
+      <h1><span> BIENVENUE <%= current_user.nickname.upcase %> </span></h1>
       <img src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598350711/main_5_o2oezm.png" alt="" class="mains-sizing">
       <div class="whitespace"></div>
       <h2>
@@ -38,6 +38,25 @@
               class="image-hero"
             /></li>
           </ul>
+          <p>Voici les quêtes que tu as commencées:</p>
+          <div class="justify-content-center ">
+            <% current_user.quests.each do |quest| %>
+              <% unless current_user.total_progress(quest) == 0 %>
+                <div class="card-quest mood-checkbox d-flex">
+                  <h4 class="inset-text mr-3">
+                    <label>
+                      <%= quest.name %> : <%= current_user.total_progress(quest) %> %
+                    </label>
+                  </h4>
+                  <%= link_to quest_path(quest), class: "dash btn-dash no-underline" do %>
+                    <h4 class="inset-text">
+                      Continuer la quête
+                    </h4>
+                  <% end %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
       <div class="title">
@@ -94,18 +113,21 @@
         </div>
         <div class="mx-auto">
           <div class="justify-content-center ">
-            <% @quests.each do |quest| %> <%= link_to quest_path(quest) do %>
-            <div class="card-quest mood-checkbox">
-              <div class="plus">
-                <p><i class="fa fa-check"></i></p>
-              </div>
-              <h4 class="inset-text">
-              <span class="active">
-                <label>
-                  <%= quest.name %>
-                </label>
-            </div>
-            <% end %> 
+            <% @quests.each do |quest| %>
+              <%= link_to quest_path(quest) do %>
+                <div class="card-quest mood-checkbox">
+                  <div class="plus">
+                    <p><i class="fa fa-check"></i></p>
+                  </div>
+                  <h4 class="inset-text">
+                    <span class="active">
+                      <label>
+                        <%= quest.name %>
+                      </label>
+                    </span>
+                  </h4>
+                </div>
+              <% end %>
             <% end %>
           </div>
         </div>
