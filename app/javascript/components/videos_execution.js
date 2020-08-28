@@ -3,7 +3,6 @@ const videosExecution = () => {
     const videos = document.querySelectorAll(".btn-link");
     videos.forEach((video) => {
       video.addEventListener("click", (event) => {
-        console.log(event.currentTarget.dataset);
         if (!(event.currentTarget.dataset.clicked === "true")) {
           const progressBar = document.querySelector("#video-progress");
           const counter = Number(progressBar.dataset.counter) + 1;

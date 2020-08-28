@@ -32,12 +32,12 @@
             </div>
           <div class="justify-content-center ">
             <% current_user.quests.each do |quest| %>
-              <% unless current_user.total_progress(quest) == 0 %>
+              <% unless current_user.total_progress(quest) == 0 || current_user.total_progress(quest) == 100 %>
                 <div class="card-quest mood-checkbox d-flex">
                   <h4 class="text-quest mr-3">
                     <label>
-                      <%= quest.name %> 
-                      ✨ <%= current_user.total_progress(quest) %> % 
+                      <%= quest.name %>
+                      ✨ <%= current_user.total_progress(quest) %> %
                     </label>
                   </h4>
                   <%= link_to quest_path(quest), class: "dash btn-dash no-underline" do %>

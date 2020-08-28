@@ -29,7 +29,7 @@ import { initCheckboxes } from "../components/init_checkboxes";
 import { flashCards } from "../components/flashcards";
 import { flashcardsExecution } from "../components/flashcards_execution";
 import { videosExecution } from "../components/videos_execution";
-import { totalExecution } from "../components/total_execution";
+// import { totalExecution } from "../components/total_execution;
 import { initHeartProgress } from "../components/progress_bar";
 import { initChatroomCable } from "../channels/chatroom_channel";
 
@@ -41,7 +41,7 @@ document.addEventListener("turbolinks:load", () => {
   flashCards();
   flashcardsExecution();
   videosExecution();
-  totalExecution();
+  // totalExecution();
   initHeartProgress();
 
 });
