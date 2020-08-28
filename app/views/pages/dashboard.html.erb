@@ -1,7 +1,11 @@
 <div class="dash">
   <div class="viewport">
     <div class="welcome">
-      <h1><span> BIENVENUE <%= current_user.nickname.upcase %> </span></h1>
+      <% if current_user.nickname == nil %>
+        <h1><span> BIENVENUE </span></h1>
+      <% else %>
+        <h1><span> BIENVENUE <%= current_user.nickname.upcase %> </span></h1>
+      <% end %>
       <img src="https://res.cloudinary.com/dqymzh7jc/image/upload/v1598350711/main_5_o2oezm.png" alt="" class="mains-sizing">
       <div class="whitespace"></div>
       <h2>

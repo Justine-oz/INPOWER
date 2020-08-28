@@ -31,6 +31,6 @@ private
 # end
 
 def user_params
-  params.require(:user).permit(:mood)
+  params.require(:user).permit(:mood, :nickname)
 end
 end
