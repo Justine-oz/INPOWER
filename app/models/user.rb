@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :user_quests
-  has_many :quests, through: :user_quests
-  has_many :messages
+  has_many :user_quests, dependent: :destroy
+  has_many :quests, through: :user_quests, dependent: :destroy
+  has_many :messages, dependent: :destroy
 
   MOODS = ["Stressé.e", "Jaloux.se", "Incompris.e", "En colère", "Seul.e", "Optimiste", "Amoureux.se", "Fort.e", "Honteux.se", "Trahi.e", "Sûr.e de moi", "Je ne sais pas"]
 
